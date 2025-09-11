@@ -1,0 +1,30 @@
+/* RTL Custom Styles */
+body {
+    direction: rtl;
+    font-family: 'Vazir', sans-serif !important;
+}
+
+/* Header mirroring */
+.header__top__left li { margin-left: 25px; margin-right: 0; }
+.header__top__right { text-align: left; }
+.header__top__right a { margin-left: 20px; margin-right: 0; }
+
+.header__menu__option { text-align: left; }
+.header__menu { margin-left: 45px; margin-right: 0; }
+.header__menu ul li { margin-left: 45px; margin-right: 0; }
+.header__menu ul li .dropdown { right: 0; left: auto; text-align: right; }
+.header__menu ul li a:after { right: 0; left: auto; }
+
+/* Hero mirroring */
+.hero__text { text-align: right; }
+
+/* Offcanvas RTL */
+.canvas__open { left: 15px; right: auto; }
+.offcanvas-menu-wrapper { left: auto; right: -300px; }
+.offcanvas-menu-wrapper.active { right: 0; left: auto; }
+.offcanvas__widget li i { margin-left: 5px; margin-right: 0; }
+
+/* General icon mirroring */
+i.fa-angle-right:before { content: "\f104"; }
+i.fa-angle-left:before { content: "\f105"; }
+
