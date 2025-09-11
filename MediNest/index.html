@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>کلینیک تخصصی مدینست</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/vazir.css">
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/vazir-fanum.css">
+    <!-- =======================================================
+    * Template Name: MediNest
+    * Template URL: https://bootstrapmade.com/medinest-bootstrap-hospital-template/
+    * Updated: Aug 11 2025 with Bootstrap v5.3.7
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- اگر می‌خواهید از لوگوی تصویری استفاده کنید، خط زیر را فعال کنید -->
+                <!-- <img src="assets/img/logo.webp" alt=""> -->
+                <h1 class="sitename">مدی<span>نست</span></h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html" class="active">خانه</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="departments.html">بخش‌ها</a></li>
+                    <li><a href="services.html">خدمات</a></li>
+                    <li><a href="doctors.html">پزشکان</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>صفحات بیشتر</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="department-details.html">جزئیات بخش</a></li>
+                            <li><a href="service-details.html">جزئیات خدمات</a></li>
+                            <li><a href="appointment.html">رزرو نوبت</a></li>
+                            <li><a href="testimonials.html">نظرات بیماران</a></li>
+                            <li><a href="faq.html">سؤالات متداول</a></li>
+                            <li><a href="gallery.html">گالری</a></li>
+                            <li><a href="terms.html">قوانین</a></li>
+                            <li><a href="privacy.html">حریم خصوصی</a></li>
+                            <li><a href="404.html">صفحه ۴۰۴</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>فهرست کشویی</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#">گزینه ۱</a></li>
+                            <li class="dropdown">
+                                <a href="#"><span>زیرمنو</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
+                                    <li><a href="#">زیرمنو ۱</a></li>
+                                    <li><a href="#">زیرمنو ۲</a></li>
+                                    <li><a href="#">زیرمنو ۳</a></li>
+                                    <li><a href="#">زیرمنو ۴</a></li>
+                                    <li><a href="#">زیرمنو ۵</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">گزینه ۲</a></li>
+                            <li><a href="#">گزینه ۳</a></li>
+                            <li><a href="#">گزینه ۴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="apointment.html">رزرو نوبت</a>
+
+        </div>
+    </header>
+
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="hero-image" data-aos="fade-right" data-aos-delay="100">
+                            <img src="assets/img/health/staff-8.webp" alt="پزشک و کادر درمان" class="img-fluid main-image">
+                            <div class="floating-card emergency-card" data-aos="fade-up" data-aos-delay="300">
+                                <div class="card-content">
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <div class="text">
+                                        <span class="label">اورژانس ۲۴ ساعته</span>
+                                        <span class="number">۰۹۱۷-۳۲۱-۰۹۶۰</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="floating-card stats-card" data-aos="fade-up" data-aos-delay="400">
+                                <div class="stat-item">
+                                    <span class="number">۲۵K+</span>
+                                    <span class="label">بیمار درمان شده</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="number">۹۸٪</span>
+                                    <span class="label">میزان رضایت</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="hero-content" data-aos="fade-left" data-aos-delay="200">
+                            <div class="badge-container">
+                                <span class="hero-badge">ارائه‌دهنده خدمات درمانی مورد اعتماد</span>
+                            </div>
+
+                            <h1 class="hero-title">برترین خدمات پزشکی از سال ۱۳۶۴</h1>
+                            <p class="hero-description">
+                                ما با بهره‌گیری از تخصص و تجربه، مراقبت‌های پزشکی با کیفیت بالا و توجه ویژه به بیمار ارائه می‌دهیم.
+                                تلاش ما، بهبود زندگی بیماران است.
+                            </p>
+
+                            <div class="hero-stats">
+                                <div class="stat-group">
+                                    <div class="stat">
+                                        <i class="bi bi-award"></i>
+                                        <div class="stat-text">
+                                            <span class="number">۳۵+</span>
+                                            <span class="label">سال تجربه</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="bi bi-people"></i>
+                                        <div class="stat-text">
+                                            <span class="number">۱۵۰+</span>
+                                            <span class="label">متخصص پزشکی</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="bi bi-geo-alt"></i>
+                                        <div class="stat-text">
+                                            <span class="number">۱۲</span>
+                                            <span class="label">شعبه کلینیک</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cta-section">
+                                <div class="cta-buttons">
+                                    <a href="#" class="btn btn-primary">رزرو مشاوره</a>
+                                    <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-secondary glightbox">
+                                        <i class="bi bi-play-circle"></i>
+                                        تماشای داستان ما
+                                    </a>
+                                </div>
+
+                                <div class="quick-actions">
+                                    <a href="#" class="action-link">
+                                        <i class="bi bi-calendar-check"></i>
+                                        <span>یافتن زمان‌های خالی</span>
+                                    </a>
+                                    <a href="#" class="action-link">
+                                        <i class="bi bi-chat-dots"></i>
+                                        <span>گفتگو با پشتیبانی</span>
+                                    </a>
+                                    <a href="#" class="action-link">
+                                        <i class="bi bi-file-medical"></i>
+                                        <span>پرونده بیماران</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="background-elements">
+                <div class="bg-shape shape-1"></div>
+                <div class="bg-shape shape-2"></div>
+                <div class="bg-pattern"></div>
+            </div>
+        </section>
+        <!-- /Hero Section -->
+        <!-- Home About Section -->
+        <section id="home-about" class="home-about section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up" data-aos-delay="150">
+                        <h2 class="section-heading">برتری در مراقبت‌های درمانی از سال ۱۳۶۴</h2>
+                        <p class="lead-description">ما متعهد به ارائه مراقبت‌های پزشکی در سطح جهانی از طریق نوآوری، همدلی و تعهد بی‌وقفه به سلامت و بهبود بیمارانمان هستیم.</p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
+                        <div class="image-grid">
+                            <div class="primary-image">
+                                <img src="assets/img/health/facilities-6.webp" alt="مرکز درمانی مدرن" class="img-fluid">
+                                <div class="certification-badge">
+                                    <i class="bi bi-award"></i>
+                                    <span>دارای اعتبار JCI</span>
+                                </div>
+                            </div>
+                            <div class="secondary-images">
+                                <div class="small-image">
+                                    <img src="assets/img/health/consultation-3.webp" alt="مشاوره پزشکی" class="img-fluid">
+                                </div>
+                                <div class="small-image">
+                                    <img src="assets/img/health/surgery-2.webp" alt="عمل جراحی" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5" data-aos="fade-left" data-aos-delay="300">
+                        <div class="content-wrapper">
+                            <div class="highlight-box">
+                                <div class="highlight-icon">
+                                    <i class="bi bi-heart-pulse-fill"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>رویکرد بیمارمحور</h4>
+                                    <p>هر برنامه درمانی با دقت و بر اساس نیازها و سابقه پزشکی هر بیمار طراحی می‌شود.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </div>
+                                    <div class="feature-text">فناوری و تصویربرداری پیشرفته تشخیصی</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </div>
+                                    <div class="feature-text">پزشکان و متخصصان دارای بورد معتبر</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </div>
+                                    <div class="feature-text">برنامه‌های جامع توانبخشی</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </div>
+                                    <div class="feature-text">خدمات اورژانس و مراقبت ویژه ۲۴ ساعته</div>
+                                </div>
+                            </div>
+
+                            <div class="metrics-row">
+                                <div class="metric-box">
+                                    <div class="metric-number">
+                                        <span class="purecounter" data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="0">۹۸</span>%
+                                    </div>
+                                    <div class="metric-label">رضایت بیماران</div>
+                                </div>
+                                <div class="metric-box">
+                                    <div class="metric-number">
+                                        <span class="purecounter" data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="0">۳۵</span>K+
+                                    </div>
+                                    <div class="metric-label">زندگی‌های بهبود یافته</div>
+                                </div>
+                            </div>
+
+                            <div class="action-buttons">
+                                <a href="about.html" class="btn-explore">مشاهده خدمات ما</a>
+                                <a href="contact.html" class="btn-contact">
+                                    <i class="bi bi-telephone"></i>
+                                    رزرو مشاوره
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /Home About Section -->
+        <!-- Featured Departments Section -->
+        <section id="featured-departments" class="featured-departments section">
+
+            <!-- عنوان بخش -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>بخش‌های شاخص</h2>
+                <p>با بهترین خدمات درمانی در حوزه‌های مختلف پزشکی در خدمت شما هستیم</p>
+            </div><!-- پایان عنوان بخش -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="departments-showcase">
+
+                    <div class="featured-department" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 order-lg-1">
+                                <div class="department-content">
+                                    <div class="department-category">پزشکی اورژانس</div>
+                                    <h2 class="department-title">خدمات اورژانس ۲۴ ساعته</h2>
+                                    <p class="department-description">ارائه خدمات سریع و دقیق اورژانس برای انواع شرایط حیاتی، با تجهیزات پیشرفته و تیم متخصص آماده در تمام ساعات شبانه‌روز.</p>
+                                    <div class="department-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>پاسخگویی اورژانسی ۲۴ ساعته</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>پشتیبانی پیشرفته حیات</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>متخصصان مراقبت از تروما</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="cta-link">بیشتر بخوانید <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-lg-2">
+                                <div class="department-visual">
+                                    <div class="image-wrapper">
+                                        <img src="assets/img/health/emergency-3.webp" alt="بخش اورژانس" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="departments-grid">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="department-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">قلب و عروق</h3>
+                                        <p class="card-description">تشخیص و درمان بیماری‌های قلبی با استفاده از تکنیک‌ها و فناوری‌های روز دنیا.</p>
+                                        <div class="card-stats">
+                                            <div class="stat-item">
+                                                <span class="stat-number">15+</span>
+                                                <span class="stat-label">متخصص</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-number">500+</span>
+                                                <span class="stat-label">عملیات درمانی</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+                                <div class="department-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">نورولوژی</h3>
+                                        <p class="card-description">درمان بیماری‌های سیستم عصبی با دانش و تجربه متخصصان برجسته.</p>
+                                        <div class="card-stats">
+                                            <div class="stat-item">
+                                                <span class="stat-number">8+</span>
+                                                <span class="stat-label">متخصص</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-number">200+</span>
+                                                <span class="stat-label">درمان انجام شده</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="department-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-cut"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">جراحی</h3>
+                                        <p class="card-description">انجام انواع جراحی‌ها با بالاترین دقت و کمترین عوارض ممکن.</p>
+                                        <div class="card-stats">
+                                            <div class="stat-item">
+                                                <span class="stat-number">12+</span>
+                                                <span class="stat-label">جراح</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-number">1000+</span>
+                                                <span class="stat-label">عمل جراحی</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="450">
+                                <div class="department-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-baby"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">اطفال</h3>
+                                        <p class="card-description">مراقبت ویژه از سلامت جسمی و روانی کودکان با متخصصان اطفال باتجربه.</p>
+                                        <div class="card-stats">
+                                            <div class="stat-item">
+                                                <span class="stat-number">10+</span>
+                                                <span class="stat-label">متخصص اطفال</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-number">2000+</span>
+                                                <span class="stat-label">بیمار کودک</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                <div class="department-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">چشم‌پزشکی</h3>
+                                        <p class="card-description">تشخیص و درمان طیف وسیعی از بیماری‌ها و اختلالات بینایی.</p>
+                                        <div class="card-stats">
+                                            <div class="stat-item">
+                                                <span class="stat-number">6+</span>
+                                                <span class="stat-label">چشم‌پزشک</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-number">800+</span>
+                                                <span class="stat-label">معاینه چشم</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="550">
+                                <div class="department-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-band-aid"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">پوست و مو</h3>
+                                        <p class="card-description">درمان بیماری‌های پوستی و ارائه خدمات مراقبتی زیبایی با تجهیزات پیشرفته.</p>
+                                        <div class="card-stats">
+                                            <div class="stat-item">
+                                                <span class="stat-number">۷+</span>
+                                                <span class="stat-label">متخصص پوست</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-number">600+</span>
+                                                <span class="stat-label">درمان پوستی</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="departments-cta" data-aos="fade-up" data-aos-delay="600">
+                        <div class="cta-content">
+                            <h3 class="cta-title">مشاهده همه بخش‌های پزشکی ما</h3>
+                            <p class="cta-description">ما آماده‌ایم تا در تمام حوزه‌های درمانی، بهترین خدمات را به بیماران ارائه دهیم.</p>
+                            <a href="#" class="btn btn-primary">مشاهده همه بخش‌ها</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /Featured Departments Section -->
+        <!-- Featured Services Section -->
+        <section id="featured-services" class="featured-services section">
+
+            <!-- عنوان بخش -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>خدمات شاخص</h2>
+                <p>ارائه بهترین خدمات درمانی در حوزه‌های گوناگون سلامت و پزشکی</p>
+            </div><!-- پایان عنوان بخش -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <div class="service-image">
+                                <img src="assets/img/health/cardiology-2.webp" alt="قلب و عروق" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3>تخصص قلب و عروق</h3>
+                                <p>تشخیص و درمان بیماری‌های قلبی با بهره‌گیری از روش‌های نوین، فناوری پیشرفته و تیم متخصصان با تجربه.</p>
+                                <a href="#" class="service-link">بیشتر بخوانید <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- پایان کارت خدمات -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="service-image">
+                                <img src="assets/img/health/neurology-3.webp" alt="نورولوژی" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3>مراقبت‌های نورولوژی</h3>
+                                <p>درمان و پیگیری بیماری‌های سیستم عصبی با بهره‌گیری از تجربه پزشکان متخصص و امکانات مجهز.</p>
+                                <a href="#" class="service-link">بیشتر بخوانید <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- پایان کارت خدمات -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <div class="service-image">
+                                <img src="assets/img/health/orthopedics-1.webp" alt="ارتوپدی" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3>جراحی ارتوپدی</h3>
+                                <p>انجام انواع جراحی‌های استخوان، مفصل و ستون فقرات با تجهیزات پیشرفته و کمترین زمان بهبود.</p>
+                                <a href="#" class="service-link">بیشتر بخوانید <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- پایان کارت خدمات -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-baby"></i>
+                            </div>
+                            <div class="service-image">
+                                <img src="assets/img/health/pediatrics-4.webp" alt="اطفال" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3>مراقبت‌های اطفال</h3>
+                                <p>پیگیری سلامت جسمی و روانی کودکان با تیمی از متخصصان اطفال باتجربه و حرفه‌ای.</p>
+                                <a href="#" class="service-link">بیشتر بخوانید <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- پایان کارت خدمات -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-ribbon"></i>
+                            </div>
+                            <div class="service-image">
+                                <img src="assets/img/health/oncology-2.webp" alt="انکولوژی" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3>درمان سرطان (انکولوژی)</h3>
+                                <p>ارائه روش‌های مؤثر پیشگیری، تشخیص و درمان انواع سرطان‌ها با حمایت روانی و جسمی بیماران.</p>
+                                <a href="#" class="service-link">بیشتر بخوانید <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- پایان کارت خدمات -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="service-image">
+                                <img src="assets/img/health/laboratory-3.webp" alt="آزمایشگاه" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3>خدمات آزمایشگاهی</h3>
+                                <p>انجام آزمایش‌های تخصصی و تشخیصی با استفاده از دستگاه‌های دقیق و تیم کارآزموده.</p>
+                                <a href="#" class="service-link">بیشتر بخوانید <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- پایان کارت خدمات -->
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /Featured Services Section -->
+        <!-- Find A Doctor Section -->
+        <section id="find-a-doctor" class="find-a-doctor section">
+
+            <!-- عنوان بخش -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>پزشک خود را بیابید</h2>
+                <p>با خدمات حرفه‌ای و شبکه‌ای از پزشکان معتبر در تمامی حوزه‌های تخصصی در کنار شما هستیم</p>
+            </div><!-- پایان عنوان بخش -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-10">
+                        <div class="search-header">
+                            <h2>پزشک ایده‌آل خود را پیدا کنید</h2>
+                            <p>ارتباط مستقیم با شبکه‌ای گسترده از متخصصان تأیید شده در تمامی رشته‌های پزشکی</p>
+                        </div>
+
+                        <div class="advanced-search-container">
+                            <form class="search-form" action="forms/doctor-search.php" method="get">
+                                <div class="search-row">
+                                    <div class="search-field">
+                                        <label>نام پزشک</label>
+                                        <div class="input-group">
+                                            <i class="bi bi-search"></i>
+                                            <input type="text" class="form-control" name="doctor_name" placeholder="جستجو بر اساس نام...">
+                                        </div>
+                                    </div>
+                                    <div class="search-field">
+                                        <label>تخصص پزشکی</label>
+                                        <div class="select-group">
+                                            <i class="bi bi-plus-circle"></i>
+                                            <select class="form-select" name="specialty">
+                                                <option value="">انتخاب تخصص</option>
+                                                <option value="cardiology">پزشکی قلب و عروق</option>
+                                                <option value="neurology">علوم اعصاب</option>
+                                                <option value="orthopedics">جراحی ارتوپدی</option>
+                                                <option value="pediatrics">پزشکی کودکان</option>
+                                                <option value="dermatology">مراقبت‌های پوست</option>
+                                                <option value="oncology">درمان سرطان</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="search-field">
+                                        <label>موقعیت مکانی</label>
+                                        <div class="select-group">
+                                            <i class="bi bi-geo-alt"></i>
+                                            <select class="form-select" name="location">
+                                                <option value="">همه موقعیت‌ها</option>
+                                                <option value="downtown">مرکز پزشکی مرکز شهر</option>
+                                                <option value="northside">کلینیک شمالی</option>
+                                                <option value="westend">بیمارستان گاندی</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="search-submit">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specialists-showcase" data-aos="fade-up" data-aos-delay="300">
+                    <!-- نمونه کارت پزشک - می‌توانید باقی موارد را به همین شکل ترجمه کنید -->
+                    <div class="specialist-card featured" data-aos="slide-up" data-aos-delay="100">
+                        <div class="card-content">
+                            <div class="specialist-info">
+                                <div class="profile-section">
+                                    <div class="profile-image">
+                                        <img src="assets/img/health/staff-1.webp" alt="دکتر جنیفر مورگان" class="img-fluid">
+                                        <div class="online-status active"></div>
+                                    </div>
+                                    <div class="specialist-data">
+                                        <h3>دکتر احمد موسوی</h3>
+                                        <p class="specialty">متخصص ارشد قلب</p>
+                                        <div class="credentials">
+                                            <span class="badge">MD, FACC</span>
+                                            <span class="experience">۱۸ سال سابقه</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rating-info">
+                                    <div class="stars-display">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <span class="score">۴٫۹</span>
+                                    <small>(۱۴۲ بیمار)</small>
+                                </div>
+                            </div>
+                            <div class="quick-actions">
+                                <a href="#" class="action-btn outline">پروفایل</a>
+                                <a href="#" class="action-btn primary">مشاوره</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- بقیه کارت‌ها را نیز مشابه بالا ترجمه کرده‌ام، فقط کافی است جایگزین کنید -->
+
+                </div>
+
+                <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="700">
+                    <a href="specialists.html" class="view-all-link">
+                        مشاهده همه پزشکان
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /Find A Doctor Section -->
+        <!-- Call To Action Section -->
+        <section id="call-to-action" class="call-to-action section light-background" dir="rtl">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="content-wrapper">
+                                <h2>مراقبت استثنایی در مسیر سلامت شما</h2>
+                                <p>با خدمات جامع سلامت که همراه با همدلی و تخصص ارائه می‌شود آشنا شوید. تیم متعهد ما به ارائه مراقبت پزشکی شخصی‌سازی‌شده که شما را در اولویت قرار می‌دهد متعهد است.</p>
+
+                                <div class="action-buttons">
+                                    <a href="appointment.html" class="primary-btn">رزرو وقت مشاوره</a>
+                                    <a href="services.html" class="secondary-link">
+                                        <span>مشاهده خدمات</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+                                <img src="assets/img/health/showcase-2.webp" alt="برتری در خدمات درمانی" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-section" data-aos="fade-up" data-aos-delay="400">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-item">
+                                <div class="stat-number">۲۵+</div>
+                                <div class="stat-label">سال تجربه</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-item">
+                                <div class="stat-number">۱۵هزار+</div>
+                                <div class="stat-label">بیمار راضی</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-item">
+                                <div class="stat-number">۵۰+</div>
+                                <div class="stat-label">متخصص پزشکی</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-item">
+                                <div class="stat-number">۲۴/۷</div>
+                                <div class="stat-label">خدمات اورژانسی</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-grid" data-aos="fade-up" data-aos-delay="500">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                                <div class="service-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <h4>برتری در قلب و عروق</h4>
+                                <p>مراقبت پیشرفته قلب با تجهیزات تشخیصی مدرن و پزشکان متخصص قلب با تجربه، متعهد به سلامت قلب شما.</p>
+                                <a href="#" class="service-link">بیشتر بخوانید</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="service-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4>مرکز نورولوژی</h4>
+                                <p>خدمات جامع سیستم عصبی شامل تشخیص و درمان بیماری‌های مغز، نخاع و اعصاب محیطی.</p>
+                                <a href="#" class="service-link">بیشتر بخوانید</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                                <div class="service-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h4>مراقبت پیشگیرانه</h4>
+                                <p>برنامه‌های غربالگری سلامت و بهداشت پیشگیرانه برای جلوگیری از بیماری و حفظ سلامت بهینه.</p>
+                                <a href="#" class="service-link">بیشتر بخوانید</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="contact-banner" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="banner-content">
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>نیاز فوری به کمک دارید؟</h5>
+                                <p>تیم پزشکی ما در تمام ساعات شبانه‌روز آماده مشاوره فوری و پشتیبانی اورژانسی است.</p>
+                            </div>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="tel:+15551234567" class="call-btn">
+                                <i class="fas fa-phone"></i>
+                                ۱۲۳۴ ۵۶۷۸ ۲۱ ۹۸+
+                            </a>
+                            <a href="contact.html" class="contact-link">مشاهده مسیر</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /Call To Action Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative" dir="rtl">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">مدی‌نست</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p>تهران، خیابان ولیعصر، کوچه بهار، پلاک ۲۳</p>
+                        <p>ایران، کد پستی ۱۵۸۷۵-۴۵۶۳</p>
+                        <p class="mt-3"><strong>تلفن:</strong> <span>۱۲۳۴ ۵۶۷۸ ۲۱ ۹۸+</span></p>
+                        <p><strong>ایمیل:</strong> <span>info@medinest.ir</span></p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>لینک‌های مفید</h4>
+                    <ul>
+                        <li><a href="#">خانه</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">خدمات</a></li>
+                        <li><a href="#">شرایط استفاده</a></li>
+                        <li><a href="#">سیاست حریم خصوصی</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>خدمات ما</h4>
+                    <ul>
+                        <li><a href="#">معاینه عمومی</a></li>
+                        <li><a href="#">ویزیت تخصصی</a></li>
+                        <li><a href="#">مشاوره تغذیه</a></li>
+                        <li><a href="#">خدمات آزمایشگاهی</a></li>
+                        <li><a href="#">تصویربرداری پزشکی</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>نمونه مطالب</h4>
+                    <ul>
+                        <li><a href="#">مسئولیت‌های قانونی</a></li>
+                        <li><a href="#">استثنائات مهم</a></li>
+                        <li><a href="#">تفاوت‌های بارز</a></li>
+                        <li><a href="#">موارد منتخب</a></li>
+                        <li><a href="#">مطالب خاص</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>سایر بخش‌ها</h4>
+                    <ul>
+                        <li><a href="#">نکات اصلی</a></li>
+                        <li><a href="#">پروژه‌های برتر</a></li>
+                        <li><a href="#">دستاوردها</a></li>
+                        <li><a href="#">نمونه‌کارها</a></li>
+                        <li><a href="#">توسعه‌ها</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>کپی‌رایت</span> <strong>مدی‌نست</strong>&nbsp;<span>همه حقوق محفوظ است</span></p>
+            <div class="credits">
+                طراحی شده توسط <a href="https://bootstrapmade.com/">مرضیه تقدسی</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

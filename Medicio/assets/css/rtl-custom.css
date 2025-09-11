@@ -1,0 +1,39 @@
+
+/* RTL Custom Styles */
+body {
+    direction: rtl;
+    font-family: Vazir, sans-serif;
+    text-align: right;
+}
+
+/* Header mirroring */
+.header .branding {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.header .navmenu ul {
+    flex-direction: row-reverse;
+}
+
+.header .navmenu ul li {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+/* Keep hero section LTR */
+#hero {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Dropdown menu alignment */
+.navmenu .dropdown ul {
+    text-align: right;
+}
+
+/* Mobile nav toggle position */
+.mobile-nav-toggle {
+    left: 15px;
+    right: auto;
+}
