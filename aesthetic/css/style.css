@@ -1568,12 +1568,15 @@ ol {
 
 .services__details__widget {
 	text-align: right;
+	
+	
 }
 
-.services__details__widget .rating i {
-	font-size: 13px;
-	color: #e4c870;
-}
+	.services__details__widget .rating i {
+		font-size: 13px;
+		color: #e4c870;
+		
+	}
 
 .services__details__widget h3 {
 	color: #13a2b7;
@@ -2263,6 +2266,7 @@ ol {
 .contact__widget__text {
 	overflow: hidden;
 	padding-top: 8px;
+	text-align:center;
 }
 
 .contact__widget__text h5 {

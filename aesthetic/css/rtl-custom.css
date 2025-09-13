@@ -1,4 +1,4 @@
-/* RTL Custom Styles */
+﻿/* RTL Custom Styles */
 body {
     direction: rtl;
     font-family: 'Vazir', sans-serif !important;
@@ -28,3 +28,992 @@ body {
 i.fa-angle-right:before { content: "\f104"; }
 i.fa-angle-left:before { content: "\f105"; }
 
+/* شماره موبایل بالای لوگو در RTL حالت دسکتاپ */
+@media (min-width: 992px) {
+    [dir="rtl"] .header__top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* برای راست‌چینی کامل از flex-end استفاده کن */
+    }
+
+    [dir="rtl"] .header__top__left {
+        order: 1; /* شماره موبایل */
+        width: 100%;
+        text-align: right;
+    }
+
+    [dir="rtl"] .header__top__right {
+        order: 2; /* شبکه‌های اجتماعی یا موارد دیگر */
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* موبایل: لوگو راست، همبرگری چپ */
+@media (max-width: 991px) {
+    [dir="rtl"] .canvas__open {
+        left: 15px;
+        right: auto;
+    }
+
+    [dir="rtl"] .header__logo {
+        text-align: right;
+    }
+
+        [dir="rtl"] .header__logo a {
+            display: inline-block;
+        }
+}
+/* موبایل - راست‌چین کردن محتوای منوی همبرگری در حالت RTL */
+@media (max-width: 991px) {
+    [dir="rtl"] .offcanvas-menu-wrapper {
+        text-align: right;
+    }
+
+        [dir="rtl"] .offcanvas-menu-wrapper ul li {
+            text-align: right;
+        }
+
+        [dir="rtl"] .offcanvas-menu-wrapper .dropdown {
+            right: 0;
+            left: auto;
+        }
+}
+/* ستون‌بندی و متن فوتر در حالت RTL */
+[dir="rtl"] .footer__top .row {
+    flex-direction: row-reverse; /* ستون‌ها با ترتیب صحیح در RTL */
+}
+
+[dir="rtl"] .footer__widget,
+[dir="rtl"] .footer__address {
+    text-align: right; /* راست‌چین کردن محتوای ستون */
+}
+
+/* اطمینان از اینکه فرم خبرنامه هم راست‌چین میشه */
+[dir="rtl"] .footer__newslatter form input {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+[dir="rtl"] .footer__newslatter form button {
+    border-radius: 50px 0 0 50px; /* برعکس radius برای RTL */
+    right: auto;
+    left: 0;
+}
+
+/* آیتم‌های فهرست و کپی‌رایت */
+[dir="rtl"] .footer__widget ul li,
+[dir="rtl"] .footer__copyright ul {
+    text-align: right;
+}
+/* چینش تیتر و دکمه در سکشن‌های RTL */
+[dir="rtl"] .section-title {
+    text-align: right !important; /* تیتر به راست */
+}
+
+    /* اگر دکمه کنار تیتر بود و می‌خوای سمت چپ بیاد */
+    [dir="rtl"] .section-title .primary-btn {
+        float: left;
+        margin-left: 0;
+        margin-right: auto;
+    }
+/* دکمه تماس با ما در سکشن خدمات - RTL */
+[dir="rtl"] .services__btn {
+    text-align: left; /* بفرستش سمت چپ */
+}
+
+    [dir="rtl"] .services__btn .primary-btn {
+        margin-left: 0;
+        margin-right: auto; /* چسباندن به سمت چپ */
+    }
+/* دکمه نمایش همه اخبار در RTL */
+[dir="rtl"] .latest__btn {
+    text-align: left; /* ببرش سمت چپ */
+}
+
+    [dir="rtl"] .latest__btn .primary-btn {
+        margin-left: 0;
+        margin-right: auto; /* چسباندن به لبه چپ */
+    }
+/* راست‌چین کردن محتوای بخش آخرین اخبار در RTL */
+[dir="rtl"] .latest__item {
+    text-align: right;
+    direction: rtl; /* اطمینان از شروع متن از سمت راست */
+}
+
+    [dir="rtl"] .latest__item h5 a {
+        display: inline-block;
+        text-align: right;
+    }
+
+    [dir="rtl"] .latest__item p {
+        text-align: right;
+    }
+
+    [dir="rtl"] .latest__item ul li {
+        margin-left: 22px; /* جایگزین margin-right در LTR */
+        margin-right: 0;
+    }
+
+        [dir="rtl"] .latest__item ul li:after {
+            right: auto;
+            left: -16px; /* نقطه جداکننده در سمت چپ قرار گیرد */
+        }
+
+        [dir="rtl"] .latest__item ul li img {
+            margin-left: 5px; /* فاصله بین عکس و متن */
+            margin-right: 0;
+        }
+/* --------- Services section RTL fixes --------- */
+/* کانتینر کلی راست‌چین */
+[dir="rtl"] .services {
+    direction: rtl;
+}
+
+    /* عنوان بخش راست‌چین بماند (معمولاً از قبل درست است) */
+    [dir="rtl"] .services .section-title {
+        text-align: right;
+    }
+
+/* دکمه تماس در این سکشن به سمت چپ منتقل شود */
+[dir="rtl"] .services__btn {
+    text-align: left;
+}
+
+    [dir="rtl"] .services__btn .primary-btn {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+/* آیتم خدمات: متن و تیتر راست‌چین و آیکون به سمت راست منتقل شود */
+[dir="rtl"] .services__item {
+    text-align: right;
+    direction: rtl;
+    /* حذف paddings/ floats پیش‌فرض که باعث نامرتبی می‌شود */
+    padding-left: 50px; /* در style.css برای LTR از padding-left استفاده شده؛ برای RTL آن را نگه می‌داریم تا فضا برای آیکون درست بماند */
+    padding-right: 30px; /* کاهش فضا سمت راست */
+}
+
+/* آیکون اکنون در سمت راست قرار گیرد (عوض کردن float) */
+[dir="rtl"] .services__item__icon {
+    float: right; /* قبلاً float:left در LTR بود */
+    margin-left: 0;
+    margin-right: 40px; /* فاصله بین آیکون و متن (در RTL سمت راست است) */
+}
+
+    /* آیکون درون span را مانند قبل نگه می‌داریم */
+    [dir="rtl"] .services__item__icon span {
+        display: inline-block;
+    }
+
+/* تیتر و پاراگراف راست‌چین شوند */
+[dir="rtl"] .services__item__text h5,
+[dir="rtl"] .services__item__text p {
+    text-align: right;
+}
+
+/* اگر overflow یا تراز متن به خاطر float به هم می‌خورد، این clearfix را اعمال کن */
+[dir="rtl"] .services__item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* واکنش‌گرایی: در موبایل که ستون‌ها زیر هم قرار می‌گیرند، آیکون را مرکز یا چپ/راست هماهنگ کن */
+@media (max-width: 767px) {
+    [dir="rtl"] .services__item {
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center; /* در موبایل معمولاً مرکز کردن زیباتر است */
+    }
+
+    [dir="rtl"] .services__item__icon {
+        float: none;
+        margin: 0 0 15px 0;
+        display: block;
+    }
+
+    [dir="rtl"] .services__item__text h5,
+    [dir="rtl"] .services__item__text p {
+        text-align: center;
+    }
+}
+/* فیکس اسلایدر Testimonial برای RTL */
+[dir="rtl"] .testimonial__slider.owl-carousel {
+    direction: rtl; /* مهم برای عملکرد JS */
+}
+
+[dir="rtl"] .testimonial__slider .owl-stage {
+    display: flex;
+}
+
+[dir="rtl"] .testimonial__slider .owl-item {
+    float: right !important; /* به جای float: none، باید float ریورس شود */
+}
+
+/* راست‌چین کردن متن داخل آیتم */
+[dir="rtl"] .testimonial__item {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .testimonial__author__icon {
+    float: right;
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+[dir="rtl"] .testimonial__author__text {
+    text-align: right;
+}
+
+/* استایل ستاره‌ها */
+[dir="rtl"] .rating {
+    text-align: right;
+}
+
+    [dir="rtl"] .rating .fa {
+        margin-left: 6px;
+        margin-right: 0;
+    }
+/* ---------- RTL Fix for Services Page ---------- */
+[dir="rtl"] .services-page {
+    direction: rtl;
+}
+
+[dir="rtl"] .services__details {
+    text-align: right;
+}
+
+/* تایتل اصلی و قیمت در سمت راست */
+[dir="rtl"] .services__details__title {
+    text-align: right;
+}
+
+[dir="rtl"] .services__details__widget {
+    text-align: left; /* چون قیمت باید سمت چپ بیفته */
+}
+
+/* نوشتهٔ اصلی و فهرست ویژگی‌ها */
+[dir="rtl"] .services__details__text,
+[dir="rtl"] .services__details__desc {
+    text-align: right;
+}
+
+[dir="rtl"] .services__details__feature {
+    padding-right: 0;
+}
+
+    [dir="rtl"] .services__details__feature li {
+        text-align: right;
+    }
+
+        [dir="rtl"] .services__details__feature li i {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+
+/* ایمیج‌های کوچک زیر تصویر اصلی */
+[dir="rtl"] .services__details__item__pic {
+    text-align: right;
+}
+
+/* بخش سایدبار سرویس‌ها */
+[dir="rtl"] .services__sidebar {
+    text-align: right;
+}
+
+    [dir="rtl"] .services__sidebar .services__title h4 img {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+/* آیکون‌های آکاردئون سمت راست */
+[dir="rtl"] .services__accordion .card-heading a {
+    display: block;
+    text-align: right;
+}
+
+/* فرم رزرو وقت */
+[dir="rtl"] .services__appoinment form {
+    direction: rtl;
+    text-align: right;
+}
+
+    [dir="rtl"] .services__appoinment form input,
+    [dir="rtl"] .services__appoinment form select {
+        text-align: right;
+    }
+
+[dir="rtl"] .services__appoinment .datepicker__item i {
+    right: auto;
+    left: 20px; /* آیکون تاریخ بیاد سمت چپ */
+}
+/* Fix icon position in Services Title for RTL */
+[dir="rtl"] .services__title h4 img {
+    margin-left: 10px; /* فاصله بین آیکون و متن */
+    margin-right: 0; /* حذف فاصله پیش‌فرض LTR */
+}
+
+[dir="rtl"] .services__title h4 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* متن بعد از آیکون راست‌چین */
+}
+.services__accordion .card-heading a:after,
+.services__accordion .card-heading.active a:after,
+.services__accordion .card-heading a[aria-expanded=true]:after {
+    left: 28px !important;
+    right: auto !important;
+}
+/* RTL alignment for nice-select in appointment form */
+.services__appoinment form .nice-select {
+    direction: rtl;
+    text-align: right !important; /* متن راست‌چین */
+    padding-right: 5px; /* فضای سمت راست برای متن */
+    padding-left: 35px; /* فضای سمت چپ برای فلش */
+}
+
+    /* فلش رو ببر سمت چپ */
+    .services__appoinment form .nice-select:after {
+        left: 15px; /* جای فلش سمت چپ */
+        right: auto; /* غیرفعال کردن جای پیش‌فرض RTL */
+    }
+
+    /* لیست بازشونده هم راست‌چین باشه */
+    .services__appoinment form .nice-select .list {
+        text-align: right;
+    }
+    /* متن گزینه‌ها در لیست باز شده هم راست‌چین */
+    .services__appoinment form .nice-select .list {
+        text-align: right;
+        direction: rtl;
+    }
+
+        .services__appoinment form .nice-select .list li {
+            text-align: right;
+            direction: rtl;
+        }
+.breadcrumb__links a:after {
+    content: "/";
+    background: none;
+    border-radius: 0;
+    position: static; /* دیگه موقعیت مطلق نباشه */
+    margin: 0 8px; /* فاصله بین متن و اسلش */
+    color: #ffffff; /* رنگ هماهنگ */
+    font-size: 15px;
+}
+
+.breadcrumb__links a:last-child:after {
+    content: "";
+}
+
+
+.services__details__widget {
+    display: flex;
+    flex-direction: column; /* بچین زیر هم */
+    align-items: flex-start; /* ستون بچسبه به سمت چپ */
+    text-align: left; /* متن هم سمت چپ */
+}
+
+    .services__details__widget .rating {
+        margin-bottom: 4px; /* فاصله کوچک بین ستاره و قیمت */
+    }
+
+    .services__details__widget h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #13a2b7;
+        margin: 0;
+    }
+/* والد تصویر باید نسبی باشه تا موقعیت‌گذاری مطلق کار کنه */
+.services__details__pic {
+    position: relative;
+}
+
+/* جابه‌جایی ستاره‌ها و قیمت به بالای تصویر سمت چپ */
+.services__details__widget {
+    position: absolute;
+    top: 12px; /* فاصله از بالای تصویر */
+    left: 12px; /* فاصله از سمت چپ تصویر */
+    display: flex;
+    flex-direction: column; /* ستاره بالا، قیمت زیرش */
+    align-items: flex-start; /* چسبیده به سمت چپ */
+    text-align: left;
+    background: rgba(255, 255, 255, 0.0); /* بدون پس‌زمینه، یا اضافه کن اگر خوانایی کم باشه */
+    z-index: 10; /* مطمئن شو روی تصویر است */
+}
+
+    /* فاصله بین ستاره و قیمت */
+    .services__details__widget .rating {
+        margin-bottom: 4px;
+    }
+
+    .services__details__widget h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #13a2b7;
+        margin: 0;
+    }
+/* RTL fix for About section */
+.about__text {
+    direction: rtl; /* متن‌ها و ترتیب آیکون‌ها را راست به چپ می‌کند */
+    text-align: right; /* تمام متن‌ها راست‌چین */
+    padding-left: 0; /* حذف پدینگ LTR */
+    padding-right: 20px; /* جایگزین پدینگ در RTL */
+}
+
+    .about__text ul li i {
+        margin-left: 6px; /* آیکون سمت راست متن */
+        margin-right: 0; /* حذف فاصله اضافی در LTR */
+    }
+/* RTL Custom Styles */
+body {
+    direction: rtl;
+    font-family: 'Vazir', sans-serif !important;
+}
+
+/* Header mirroring */
+.header__top__left li {
+    margin-left: 25px;
+    margin-right: 0;
+}
+
+.header__top__right {
+    text-align: left;
+}
+
+    .header__top__right a {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+.header__menu__option {
+    text-align: left;
+}
+
+.header__menu {
+    margin-left: 45px;
+    margin-right: 0;
+}
+
+    .header__menu ul li {
+        margin-left: 45px;
+        margin-right: 0;
+    }
+
+        .header__menu ul li .dropdown {
+            right: 0;
+            left: auto;
+            text-align: right;
+        }
+
+        .header__menu ul li a:after {
+            right: 0;
+            left: auto;
+        }
+
+/* Hero mirroring */
+.hero__text {
+    text-align: right;
+}
+
+/* Offcanvas RTL */
+.canvas__open {
+    left: 15px;
+    right: auto;
+}
+
+.offcanvas-menu-wrapper {
+    left: auto;
+    right: -300px;
+}
+
+    .offcanvas-menu-wrapper.active {
+        right: 0;
+        left: auto;
+    }
+
+.offcanvas__widget li i {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+/* General icon mirroring */
+i.fa-angle-right:before {
+    content: "\f104";
+}
+
+i.fa-angle-left:before {
+    content: "\f105";
+}
+
+/* شماره موبایل بالای لوگو در RTL حالت دسکتاپ */
+@media (min-width: 992px) {
+    [dir="rtl"] .header__top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* برای راست‌چینی کامل از flex-end استفاده کن */
+    }
+
+    [dir="rtl"] .header__top__left {
+        order: 1; /* شماره موبایل */
+        width: 100%;
+        text-align: right;
+    }
+
+    [dir="rtl"] .header__top__right {
+        order: 2; /* شبکه‌های اجتماعی یا موارد دیگر */
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* موبایل: لوگو راست، همبرگری چپ */
+@media (max-width: 991px) {
+    [dir="rtl"] .canvas__open {
+        left: 15px;
+        right: auto;
+    }
+
+    [dir="rtl"] .header__logo {
+        text-align: right;
+    }
+
+        [dir="rtl"] .header__logo a {
+            display: inline-block;
+        }
+}
+/* موبایل - راست‌چین کردن محتوای منوی همبرگری در حالت RTL */
+@media (max-width: 991px) {
+    [dir="rtl"] .offcanvas-menu-wrapper {
+        text-align: right;
+    }
+
+        [dir="rtl"] .offcanvas-menu-wrapper ul li {
+            text-align: right;
+        }
+
+        [dir="rtl"] .offcanvas-menu-wrapper .dropdown {
+            right: 0;
+            left: auto;
+        }
+}
+/* ستون‌بندی و متن فوتر در حالت RTL */
+[dir="rtl"] .footer__top .row {
+    flex-direction: row-reverse; /* ستون‌ها با ترتیب صحیح در RTL */
+}
+
+[dir="rtl"] .footer__widget,
+[dir="rtl"] .footer__address {
+    text-align: right; /* راست‌چین کردن محتوای ستون */
+}
+
+/* اطمینان از اینکه فرم خبرنامه هم راست‌چین میشه */
+[dir="rtl"] .footer__newslatter form input {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+[dir="rtl"] .footer__newslatter form button {
+    border-radius: 50px 0 0 50px; /* برعکس radius برای RTL */
+    right: auto;
+    left: 0;
+}
+
+/* آیتم‌های فهرست و کپی‌رایت */
+[dir="rtl"] .footer__widget ul li,
+[dir="rtl"] .footer__copyright ul {
+    text-align: right;
+}
+/* چینش تیتر و دکمه در سکشن‌های RTL */
+[dir="rtl"] .section-title {
+    text-align: right !important; /* تیتر به راست */
+}
+
+    /* اگر دکمه کنار تیتر بود و می‌خوای سمت چپ بیاد */
+    [dir="rtl"] .section-title .primary-btn {
+        float: left;
+        margin-left: 0;
+        margin-right: auto;
+    }
+/* دکمه تماس با ما در سکشن خدمات - RTL */
+[dir="rtl"] .services__btn {
+    text-align: left; /* بفرستش سمت چپ */
+}
+
+    [dir="rtl"] .services__btn .primary-btn {
+        margin-left: 0;
+        margin-right: auto; /* چسباندن به سمت چپ */
+    }
+/* دکمه نمایش همه اخبار در RTL */
+[dir="rtl"] .latest__btn {
+    text-align: left; /* ببرش سمت چپ */
+}
+
+    [dir="rtl"] .latest__btn .primary-btn {
+        margin-left: 0;
+        margin-right: auto; /* چسباندن به لبه چپ */
+    }
+/* راست‌چین کردن محتوای بخش آخرین اخبار در RTL */
+[dir="rtl"] .latest__item {
+    text-align: right;
+    direction: rtl; /* اطمینان از شروع متن از سمت راست */
+}
+
+    [dir="rtl"] .latest__item h5 a {
+        display: inline-block;
+        text-align: right;
+    }
+
+    [dir="rtl"] .latest__item p {
+        text-align: right;
+    }
+
+    [dir="rtl"] .latest__item ul li {
+        margin-left: 22px; /* جایگزین margin-right در LTR */
+        margin-right: 0;
+    }
+
+        [dir="rtl"] .latest__item ul li:after {
+            right: auto;
+            left: -16px; /* نقطه جداکننده در سمت چپ قرار گیرد */
+        }
+
+        [dir="rtl"] .latest__item ul li img {
+            margin-left: 5px; /* فاصله بین عکس و متن */
+            margin-right: 0;
+        }
+/* --------- Services section RTL fixes --------- */
+/* کانتینر کلی راست‌چین */
+[dir="rtl"] .services {
+    direction: rtl;
+}
+
+    /* عنوان بخش راست‌چین بماند (معمولاً از قبل درست است) */
+    [dir="rtl"] .services .section-title {
+        text-align: right;
+    }
+
+/* دکمه تماس در این سکشن به سمت چپ منتقل شود */
+[dir="rtl"] .services__btn {
+    text-align: left;
+}
+
+    [dir="rtl"] .services__btn .primary-btn {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+/* آیتم خدمات: متن و تیتر راست‌چین و آیکون به سمت راست منتقل شود */
+[dir="rtl"] .services__item {
+    text-align: right;
+    direction: rtl;
+    /* حذف paddings/ floats پیش‌فرض که باعث نامرتبی می‌شود */
+    padding-left: 50px; /* در style.css برای LTR از padding-left استفاده شده؛ برای RTL آن را نگه می‌داریم تا فضا برای آیکون درست بماند */
+    padding-right: 30px; /* کاهش فضا سمت راست */
+}
+
+/* آیکون اکنون در سمت راست قرار گیرد (عوض کردن float) */
+[dir="rtl"] .services__item__icon {
+    float: right; /* قبلاً float:left در LTR بود */
+    margin-left: 0;
+    margin-right: 40px; /* فاصله بین آیکون و متن (در RTL سمت راست است) */
+}
+
+    /* آیکون درون span را مانند قبل نگه می‌داریم */
+    [dir="rtl"] .services__item__icon span {
+        display: inline-block;
+    }
+
+/* تیتر و پاراگراف راست‌چین شوند */
+[dir="rtl"] .services__item__text h5,
+[dir="rtl"] .services__item__text p {
+    text-align: right;
+}
+
+/* اگر overflow یا تراز متن به خاطر float به هم می‌خورد، این clearfix را اعمال کن */
+[dir="rtl"] .services__item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* واکنش‌گرایی: در موبایل که ستون‌ها زیر هم قرار می‌گیرند، آیکون را مرکز یا چپ/راست هماهنگ کن */
+@media (max-width: 767px) {
+    [dir="rtl"] .services__item {
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center; /* در موبایل معمولاً مرکز کردن زیباتر است */
+    }
+
+    [dir="rtl"] .services__item__icon {
+        float: none;
+        margin: 0 0 15px 0;
+        display: block;
+    }
+
+    [dir="rtl"] .services__item__text h5,
+    [dir="rtl"] .services__item__text p {
+        text-align: center;
+    }
+}
+/* فیکس اسلایدر Testimonial برای RTL */
+[dir="rtl"] .testimonial__slider.owl-carousel {
+    direction: rtl; /* مهم برای عملکرد JS */
+}
+
+[dir="rtl"] .testimonial__slider .owl-stage {
+    display: flex;
+}
+
+[dir="rtl"] .testimonial__slider .owl-item {
+    float: right !important; /* به جای float: none، باید float ریورس شود */
+}
+
+/* راست‌چین کردن متن داخل آیتم */
+[dir="rtl"] .testimonial__item {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .testimonial__author__icon {
+    float: right;
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+[dir="rtl"] .testimonial__author__text {
+    text-align: right;
+}
+
+/* استایل ستاره‌ها */
+[dir="rtl"] .rating {
+    text-align: right;
+}
+
+    [dir="rtl"] .rating .fa {
+        margin-left: 6px;
+        margin-right: 0;
+    }
+/* ---------- RTL Fix for Services Page ---------- */
+[dir="rtl"] .services-page {
+    direction: rtl;
+}
+
+[dir="rtl"] .services__details {
+    text-align: right;
+}
+
+/* تایتل اصلی و قیمت در سمت راست */
+[dir="rtl"] .services__details__title {
+    text-align: right;
+}
+
+[dir="rtl"] .services__details__widget {
+    text-align: left; /* چون قیمت باید سمت چپ بیفته */
+}
+
+/* نوشتهٔ اصلی و فهرست ویژگی‌ها */
+[dir="rtl"] .services__details__text,
+[dir="rtl"] .services__details__desc {
+    text-align: right;
+}
+
+[dir="rtl"] .services__details__feature {
+    padding-right: 0;
+}
+
+    [dir="rtl"] .services__details__feature li {
+        text-align: right;
+    }
+
+        [dir="rtl"] .services__details__feature li i {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+
+/* ایمیج‌های کوچک زیر تصویر اصلی */
+[dir="rtl"] .services__details__item__pic {
+    text-align: right;
+}
+
+/* بخش سایدبار سرویس‌ها */
+[dir="rtl"] .services__sidebar {
+    text-align: right;
+}
+
+    [dir="rtl"] .services__sidebar .services__title h4 img {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+/* آیکون‌های آکاردئون سمت راست */
+[dir="rtl"] .services__accordion .card-heading a {
+    display: block;
+    text-align: right;
+}
+
+/* فرم رزرو وقت */
+[dir="rtl"] .services__appoinment form {
+    direction: rtl;
+    text-align: right;
+}
+
+    [dir="rtl"] .services__appoinment form input,
+    [dir="rtl"] .services__appoinment form select {
+        text-align: right;
+    }
+
+[dir="rtl"] .services__appoinment .datepicker__item i {
+    right: auto;
+    left: 20px; /* آیکون تاریخ بیاد سمت چپ */
+}
+/* Fix icon position in Services Title for RTL */
+[dir="rtl"] .services__title h4 img {
+    margin-left: 10px; /* فاصله بین آیکون و متن */
+    margin-right: 0; /* حذف فاصله پیش‌فرض LTR */
+}
+
+[dir="rtl"] .services__title h4 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* متن بعد از آیکون راست‌چین */
+}
+
+.services__accordion .card-heading a:after,
+.services__accordion .card-heading.active a:after,
+.services__accordion .card-heading a[aria-expanded=true]:after {
+    left: 28px !important;
+    right: auto !important;
+}
+/* RTL alignment for nice-select in appointment form */
+.services__appoinment form .nice-select {
+    direction: rtl;
+    text-align: right !important; /* متن راست‌چین */
+    padding-right: 5px; /* فضای سمت راست برای متن */
+    padding-left: 35px; /* فضای سمت چپ برای فلش */
+}
+
+    /* فلش رو ببر سمت چپ */
+    .services__appoinment form .nice-select:after {
+        left: 15px; /* جای فلش سمت چپ */
+        right: auto; /* غیرفعال کردن جای پیش‌فرض RTL */
+    }
+
+    /* لیست بازشونده هم راست‌چین باشه */
+    .services__appoinment form .nice-select .list {
+        text-align: right;
+    }
+    /* متن گزینه‌ها در لیست باز شده هم راست‌چین */
+    .services__appoinment form .nice-select .list {
+        text-align: right;
+        direction: rtl;
+    }
+
+        .services__appoinment form .nice-select .list li {
+            text-align: right;
+            direction: rtl;
+        }
+
+.breadcrumb__links a:after {
+    content: "/";
+    background: none;
+    border-radius: 0;
+    position: static; /* دیگه موقعیت مطلق نباشه */
+    margin: 0 8px; /* فاصله بین متن و اسلش */
+    color: #ffffff; /* رنگ هماهنگ */
+    font-size: 15px;
+}
+
+.breadcrumb__links a:last-child:after {
+    content: "";
+}
+
+
+.services__details__widget {
+    display: flex;
+    flex-direction: column; /* بچین زیر هم */
+    align-items: flex-start; /* ستون بچسبه به سمت چپ */
+    text-align: left; /* متن هم سمت چپ */
+}
+
+    .services__details__widget .rating {
+        margin-bottom: 4px; /* فاصله کوچک بین ستاره و قیمت */
+    }
+
+    .services__details__widget h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #13a2b7;
+        margin: 0;
+    }
+/* والد تصویر باید نسبی باشه تا موقعیت‌گذاری مطلق کار کنه */
+.services__details__pic {
+    position: relative;
+}
+
+/* جابه‌جایی ستاره‌ها و قیمت به بالای تصویر سمت چپ */
+.services__details__widget {
+    position: absolute;
+    top: 12px; /* فاصله از بالای تصویر */
+    left: 12px; /* فاصله از سمت چپ تصویر */
+    display: flex;
+    flex-direction: column; /* ستاره بالا، قیمت زیرش */
+    align-items: flex-start; /* چسبیده به سمت چپ */
+    text-align: left;
+    background: rgba(255, 255, 255, 0.0); /* بدون پس‌زمینه، یا اضافه کن اگر خوانایی کم باشه */
+    z-index: 10; /* مطمئن شو روی تصویر است */
+}
+
+    /* فاصله بین ستاره و قیمت */
+    .services__details__widget .rating {
+        margin-bottom: 4px;
+    }
+
+    .services__details__widget h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #13a2b7;
+        margin: 0;
+    }
+/* RTL fix for About section */
+.about__text {
+    direction: rtl; /* متن‌ها و ترتیب آیکون‌ها را راست به چپ می‌کند */
+    text-align: right; /* تمام متن‌ها راست‌چین */
+    padding-left: 0; /* حذف پدینگ LTR */
+    padding-right: 20px; /* جایگزین پدینگ در RTL */
+}
+
+    .about__text ul li i {
+        margin-left: 6px; /* آیکون سمت راست متن */
+        margin-right: 0; /* حذف فاصله اضافی در LTR */
+    }
+/* ==== RTL fix for Testimonials ==== */
+[dir="rtl"] .testimonial__slider.owl-carousel {
+    direction: ltr; /* نگه داشتن اسلایدر به حالت LTR برای نظم اسلایدها */
+}
+
+[dir="rtl"] .testimonial__slider .owl-stage {
+    direction: rtl; /* ولی محتوای داخل اسلایدها RTL */
+}
+
+[dir="rtl"] .testimonial__item {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .testimonial__author__icon {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px; /* آیکن سمت راست متن */
+}
+
+[dir="rtl"] .testimonial__author__text {
+    text-align: right;
+}
+
+[dir="rtl"] .testimonial__item .rating {
+    right: auto;
+    left: 40px; /* ستاره‌ها بیفتن سمت چپ کادری که حالا RTL شده */
+}

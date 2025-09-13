@@ -4701,11 +4701,12 @@ section,
 }
 
 .appointmnet .booking-steps {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 50px;
-  padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 30px 0;
+    flex-direction: row;
 }
 
 .appointmnet .booking-steps .step {
@@ -4715,16 +4716,18 @@ section,
   position: relative;
 }
 
-.appointmnet .booking-steps .step:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 30px;
-  right: -15px;
-  width: 30px;
-  height: 2px;
-  background-color: var(--accent-color);
-  z-index: 1;
-}
+    .appointmnet .booking-steps .step:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 30px;
+       /* right: -15px;*/
+        width: 30px;
+        height: 2px;
+        background-color: var(--accent-color);
+        z-index: 1;
+        left: -15px; /* در حالت RTL خط بره سمت چپ آیکون */
+        right: auto;
+    }
 
 .appointmnet .booking-steps .step .step-icon {
   width: 60px;
@@ -5608,27 +5611,30 @@ section,
   margin: 20px 0;
 }
 
-.terms-of-service .tos-content .content-section .list-items li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 12px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
+    .terms-of-service .tos-content .content-section .list-items li {
+        position: relative;
+        padding-right: 25px;
+        padding-left: 0;
+        margin-bottom: 12px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+    }
 
 .terms-of-service .tos-content .content-section .list-items li:last-child {
   margin-bottom: 0;
 }
 
-.terms-of-service .tos-content .content-section .list-items li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-}
+        .terms-of-service .tos-content .content-section .list-items li::before {
+            content: "";
+            position: absolute;
+           
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            right: 0; /* قبلاً left: 0 بود */
+            left: auto; /* برای حذف هندلینگ LTR */
+        }
 
 .terms-of-service .tos-content .content-section .alert-box {
   display: flex;
