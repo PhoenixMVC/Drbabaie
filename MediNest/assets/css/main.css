@@ -5637,27 +5637,29 @@ section,
   margin: 20px 0;
 }
 
-.terms-of-service .tos-content .content-section .list-items li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 12px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
+    .terms-of-service .tos-content .content-section .list-items li {
+        position: relative;
+        margin-bottom: 12px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        padding-left: 0;
+        padding-right: 25px;
+    }
 
 .terms-of-service .tos-content .content-section .list-items li:last-child {
   margin-bottom: 0;
 }
 
-.terms-of-service .tos-content .content-section .list-items li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-}
+        .terms-of-service .tos-content .content-section .list-items li::before {
+            content: "";
+            position: absolute;
+            left: auto;
+            right: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+        }
 
 .terms-of-service .tos-content .content-section .alert-box {
   display: flex;
@@ -5735,24 +5737,26 @@ section,
   margin: 0;
 }
 
-.terms-of-service .tos-content .content-section .disclaimer-box ul li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 12px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 0.95rem;
-}
+    .terms-of-service .tos-content .content-section .disclaimer-box ul li {
+        position: relative;
+        padding-left: 0;
+        padding-right: 25px;
+        margin-bottom: 12px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        font-size: 0.95rem;
+    }
 
 .terms-of-service .tos-content .content-section .disclaimer-box ul li:last-child {
   margin-bottom: 0;
 }
 
-.terms-of-service .tos-content .content-section .disclaimer-box ul li::before {
-  content: "•";
-  position: absolute;
-  left: 8px;
-  color: var(--accent-color);
-}
+        .terms-of-service .tos-content .content-section .disclaimer-box ul li::before {
+            content: "•";
+            position: absolute;
+            left: auto;
+            right: 8px;
+            color: var(--accent-color);
+        }
 
 .terms-of-service .tos-content .content-section .notice-box {
   display: flex;
@@ -5853,6 +5857,7 @@ section,
   }
 }
 
+
 /*--------------------------------------------------------------
 # Privacy Section
 --------------------------------------------------------------*/
@@ -5889,12 +5894,13 @@ section,
 .privacy .privacy-content .privacy-section h3:after {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: 50px;
   height: 3px;
   background: var(--accent-color);
   border-radius: 2px;
+  left:auto;
 }
 
 .privacy .privacy-content .privacy-section h4 {
