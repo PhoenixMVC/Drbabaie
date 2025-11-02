@@ -1,0 +1,381 @@
+﻿.header-bottom .header-cart {
+    float: right; /* چون حالا سمت راست قرار گرفته */
+    text-align: right;
+}
+
+.header-bottom .header-logo {
+    float: left;
+    text-align: left;
+}
+
+.mainmenu ul.sub-menu {
+    background: #ffffff;
+    box-shadow: 2px 0 7px 0 rgba(0, 0, 0, 0.13);
+    /* اصلاح موقعیت برای باز شدن سمت راست */
+    right: 0 !important;
+    left: auto !important; /* لغو موقعیت قبلی چپ */
+    margin: 0;
+    opacity: 0;
+    padding: 15px 15px 24px 30px;
+    position: absolute;
+    text-align: right !important; /* نوشته‌ها راست‌چین */
+    top: 86px;
+    transform: scaleY(0);
+    transform-origin: top right; /* باز شدن از گوشه‌ی راست */
+    transition: all 0.5s ease 0s;
+    visibility: hidden;
+    width: 215px;
+    z-index: -9;
+    direction: rtl;
+}
+
+/* آیتم‌های زیرمنو */
+.mainmenu ul#nav li ul.sub-menu > li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+    /* لینک‌های داخل زیرمنو */
+    .mainmenu ul#nav li ul.sub-menu > li a {
+        border-bottom: 1px dotted #efefef;
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 30px;
+        padding: 0 10px 0 0; /* فاصله از راست بیشتر */
+        text-align: right !important;
+        text-transform: capitalize;
+        float: right; /* مهم‌ترین بخش برای چیدمان راست */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+/* افکت نمایش هنگام hover */
+.mainmenu > nav > ul#nav > li:hover ul.sub-menu {
+    margin-top: 0;
+    opacity: 1;
+    top: 100%;
+    transform: scaleY(1);
+    visibility: visible;
+    z-index: 999;
+}
+
+/* ساختار دو ردیفی برای آیتم سبد خرید  */
+.cart_single {
+  display: flex;
+  align-items: flex-start;
+  direction: rtl;
+  text-align: right;
+  padding: 8px 10px;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* تصویر سمت راست */
+.cart_single img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* بخش متنی کناری تصویر */
+.cart_single .cart_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+/* نام محصول همیشه خط بالا */
+.cart_single .cart_info a {
+  display: block;         /* خط جداگانه */
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 3px;     /* فاصله تا خط قیمت */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* تعداد و قیمت خط دوم */
+.cart_single .cart_info span {
+  display: inline-block;
+  font-size: 12px;
+  color: #777;
+}
+
+.cart_single .cart_info .price {
+  color: #e2b846;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+
+
+/* ======================
+   حالت موبایل (RTL)
+====================== */
+@media (max-width: 768px) {
+    /* لوگو بره راست */
+    .header-logo {
+        float: right !important;
+        text-align: right !important;
+    }
+
+    /* سبد خرید بره چپ و از چپ باز بشه */
+    .header-cart {
+        float: left !important;
+        text-align: left !important;
+    }
+
+    .cart_down_area {
+        left: 0 !important;
+        right: auto !important;
+        transform-origin: top left;
+    }
+}
+/* ============================
+   🔹 تنظیم کامل منوی موبایل به حالت RTL و آیتم‌های راست‌چین
+============================ */
+@media (max-width: 991px) {
+    /* کل منوی موبایل راست‌چین شود */
+    .mean-container .mean-nav {
+        direction: rtl;
+        text-align: right !important;
+    }
+
+        /* هر آیتم منو راست‌چین و از راست margin بخورد */
+        .mean-container .mean-nav ul li {
+            float: right !important;
+            text-align: right !important;
+        }
+
+            /* لینک‌های اصلی منو راست‌چین */
+            .mean-container .mean-nav ul li a {
+                float: right !important;
+                text-align: right !important;
+                padding: 1em 5% 1em 0 !important; /* فاصله از راست */
+            }
+
+                /* آیکون باز/بستن زیرمنو (+ , -) هم بیاد سمت چپ آیتم */
+                .mean-container .mean-nav ul li a.mean-expand {
+                    right: auto !important;
+                    left: 0 !important;
+                }
+
+        /* زیرمنوها هم راست‌چین شوند */
+        .mean-container .mean-nav ul ul {
+            direction: rtl;
+            text-align: right !important;
+        }
+
+        /* حذف float چپ اصلی meanmenu */
+        .mean-container .mean-nav ul,
+        .mean-container .mean-nav ul li,
+        .mean-container .mean-nav ul li a {
+            float: none !important;
+        }
+
+    /* هدر بالای منوی موبایل (MENU + X) */
+    .mean-container .mean-bar::after {
+        left: auto !important;
+        right: 5% !important;
+    }
+
+    .mean-container a.meanmenu-reveal {
+        right: 15px !important;
+        left: auto !important;
+    }
+}
+.mean-container .mean-bar::after {
+    content: none !important;
+}
+.footer-list > li::before {
+    right: -10px !important;
+    left: auto !important;
+}
+
+.footer-list > li {
+    padding-right: 15px; /* کمی فاصله از دایره */
+    padding-left: 0 !important;
+    text-align: right;
+}
+/* تنظیم تراز و فاصله برای وسط‌چین شدن کامل سکشن ترندها */
+.new-trend-list {
+    text-align: center;                /* تمام آیتم‌ها وسط قرار بگیرند */
+                  
+}
+
+.single-new-trend {
+    display: inline-block;             /* باعث می‌شود آیتم‌ها کنار هم قرار بگیرند */
+    float: none !important;            /* حذف float پیش‌فرض بوت‌استرپ */
+    margin: 0 10px 30px;               /* فاصله یکسان از چپ و راست */
+    vertical-align: top;               /* تراز بالای آیتم‌ها */
+}
+
+/* محدود کردن عرض و حفظ مرکز برای کل سکشن */
+.new-trend.section-padding .row {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;                 /* بسته به عرض سایت */
+}
+
+/* برای موبایل: اطمینان از تراز مرکز */
+@media (max-width: 767px) {
+    .single-new-trend {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+}
+/* چینش نظرها در حالت موبایل */
+@media (max-width: 767px) {
+    .testimonial-area .single-testimonial {
+        display: flex;
+        flex-direction: column; /* عکس بالا، متن پایین */
+        align-items: center; /* همه در مرکز ستون */
+        text-align: center; /* تراز متن‌ها وسط */
+        margin-bottom: 40px;
+    }
+
+    .testimonial-area .support-img {
+        margin-bottom: 15px; /* فاصله بین عکس و متن */
+    }
+
+        .testimonial-area .support-img img {
+            width: 120px; /* اندازه مناسب برای موبایل */
+            height: auto;
+            border-radius: 50%; /* دایره‌ای‌تر، نمای لوکس‌تر */
+            border: 2px solid #e2b846;
+        }
+
+    .testimonial-area .testimonial-text {
+        float: none; /* حذف float دسکتاپ */
+        width: 90%;
+        margin: 0 auto;
+        direction: rtl;
+        text-align: center;
+    }
+
+        .testimonial-area .testimonial-text h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .testimonial-area .testimonial-text p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #f2f2f2;
+            text-align:right;
+            
+        }
+
+        .testimonial-area .testimonial-text a {
+            display: block;
+            margin-top: 10px;
+            width: auto;
+            color: #e2b846;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+            .testimonial-area .testimonial-text a::before {
+                display: none; /* خط زیر لینک حذف شود در موبایل */
+            }
+}
+/* ---- Checkout table RTL fix ---- */
+.check-out-area table.data-table td h3.product-name {
+    text-align: right;
+    direction: rtl;
+    font-family: 'Vazir', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    padding-right: 10px;
+}
+.shop-right-area .show-label label,
+.shop-right-area h2,
+.shop-right-area .product-desc {
+    direction: rtl;
+    text-align: right;
+}
+
+.shop-pagination ul li a:hover,
+.btn-default:hover {
+    color: #e2b846;
+}
+
+.btn-default {
+    background: #e2b846;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 600;
+    padding: 6px 18px;
+}
+
+.single-product-overlay h3 {
+    font-family: 'Vazir', sans-serif;
+    color: #fff;
+}
+
+.shop-right-area .new-price {
+    color: #e2b846;
+    font-weight: 700;
+}
+
+/* ==== در حالت RTL، قیمت قدیم بره زیر قیمت جدید ==== */
+.shop-right-area .single-product-content .left-content .old-price {
+    display: block;
+    margin-top: 4px;
+    color: #999;
+
+}
+/* حذف فلش سفارشی اضافه سمت راست — حفظ فلش اصلی سمت چپ مرورگر */
+.product-size-deatils select {
+    direction: rtl;
+    text-align: right;
+    padding-right: 30px; /* فاصله از لِیبل برای ظاهر مرتب‌تر */
+}
+
+    /* اگر قالب با pseudo-element فلش سفارشی ساخته: */
+    .product-size-deatils select::after,
+    .product-size-deatils select::before {
+        content: none !important;
+        display: none !important;
+    }
+
+/* اگر با آیکن فونت ساخته شده */
+.product-size-deatils i.fa-angle-down {
+    display: none !important;
+}
+
+/* محافظه‌کارانه – فلش پیش‌فرض مرورگر رو نگه دار */
+.product-size-deatils select {
+    -webkit-appearance: auto !important;
+    -moz-appearance: auto !important;
+    appearance: auto !important;
+    background-image: initial !important;
+}
+/* --- RTL alignment for single product tabs --- */
+.p-details-tab .p-details-nav-tab {
+    direction: rtl;
+    text-align: right;
+}
+
+    .p-details-tab .p-details-nav-tab li {
+        float: right;
+        margin-left: 25px; /* فاصله بین تب‌ها از سمت چپ */
+        margin-right: 0;
+    }
+
+        .p-details-tab .p-details-nav-tab li a {
+            text-align: right;
+        }
+
