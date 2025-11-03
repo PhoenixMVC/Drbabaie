@@ -147,15 +147,17 @@ h6 {
 }
 
     .header .logo img {
-        max-height: 28px;
+        position: relative;
+        top: -3px; /* 👈 با این مقدار لوگو بالاتر یا پایین‌تر میره */
+        max-height: 26px;
         margin-right: 8px;
-        width: 40px;
+        width: 45px;
         height: auto;
         margin-left: 6px;
     }
 
 .header .logo h1 {
-  font-size: 26px;
+  font-size: 20px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
@@ -195,7 +197,7 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
+    padding: 14px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -413,26 +415,29 @@ h6 {
    =============================== */
 /* دکمه رزرو */
 .btn-reserve {
-    background-color: #D6B24C;
-    color: #222;
+    background-color: #d6b24c; /* طلایی سایت */
+    color: #fff;
+    padding: 10px 20px !important;
+    border-radius: 25px;
     font-weight: 600;
-    border-radius: 8px;
-    padding: 8px 18px;
-    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
 }
 
     .btn-reserve:hover {
-        background-color: #bb9a3f;
-        color: #111;
+        background-color: #b8963a; /* کمی تیره‌تر در هاور */
+        color: #fff;
     }
 
 /* منوی زبان */
 .language-menu a {
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     gap: 6px;
+    line-height: 1;
 }
 
     .language-menu a:hover {
@@ -491,6 +496,12 @@ h6 {
     .header-actions {
         display: none;
     }
+}
+.navmenu a,
+.language-menu a,
+.btn-reserve {
+    display: flex;
+    align-items: center;
 }
 
 /*--------------------------------------------------------------
