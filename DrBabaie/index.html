@@ -34,32 +34,41 @@
     <header id="header" class="header fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <!-- Logo -->
             <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/logo-lotus-gold.png" alt="کلینیک دکتر بابایی" class="logo-icon">
-                <h1>کلینیک دکتر بابایی<!--<span>.</span>--></h1>
+                <img src="assets/img/logo-lotus-gold.png" alt="کلینیک دکتر بابایی" >
+                <h1>کلینیک دکتر مهدی بابایی جهرمی</h1>
             </a>
 
-
-            <!-- Navigation Menu -->
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="#hero" class="active">خانه</a></li>
                     <li><a href="#about">درباره ما</a></li>
                     <li><a href="#services">خدمات</a></li>
                     <li><a href="#portfolio">گالری</a></li>
-                    <li><a href="#portfolio">سوالات متداول</a></li>
-                    <!--<li><a href="#portfolio">نمونه‌کارها</a></li>-->
+                    <li><a href="#faq">سوالات متداول</a></li>
                     <li><a href="#contact">ارتباط با ما</a></li>
+
+                    <!-- 👇 المان‌های مخصوص نمایش موبایل -->
+                    <li class="mobile-actions">
+                        <a href="#contact" class="btn btn-gold btn-reserve-mobile d-flex d-xl-none">رزرو نوبت</a>
+                    </li>
+
+                    <li class="dropdown lang-mobile d-xl-none" >
+                        <a href="#"><span>زبان‌ها</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#"><img src="https://flagcdn.com/24x18/ir.png" alt="فارسی"> فارسی</a></li>
+                            <li><a href="#"><img src="https://flagcdn.com/24x18/sa.png" alt="العربية"> العربية</a></li>
+                            <li><a href="#"><img src="https://flagcdn.com/24x18/gb.png" alt="English"> English</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav><!-- End Navmenu -->
-            <!-- دکمه رزرو نوبت و منوی زبان -->
+            </nav>
+
             <div class="header-actions d-none d-xl-flex align-items-center">
                 <a href="#appointment" class="btn-reserve">رزرو نوبت</a>
-                <!-- Dropdown Language -->
                 <div class="dropdown language-dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="flag-icon"> English
                     </a>
                     <ul class="dropdown-menu fade-lang" aria-labelledby="languageDropdown">
@@ -68,16 +77,14 @@
                         <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/24x18/gb.png" alt="English" class="flag-icon"> English</a></li>
                     </ul>
                 </div>
-
             </div>
 
         </div>
     </header>
+
     <!-- End Header -->
 
-
     <main class="main">
-
         <!-- Hero Section -->
         <section id="hero" class="hero section dark-background">
             <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
@@ -85,7 +92,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <h2>به کلینیک دکتر بابایی خوش آمدید</h2>
-                        <p>زیبایی، آرامش، و احساس خوب</p>  
+                        <p>زیبایی، آرامش، و احساس خوب</p>
                         <a href="#about" class="btn-get-started">لیست خدمات</a>
                     </div>
                 </div>
