@@ -214,6 +214,69 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+    /* -------------------- VIP Paging Scroll (GapGPT 2025) -------------------- */
+    (function () {
+        const sections = [...document.querySelectorAll('section[id]')];
+        const headerOffset = 90;
+        let isAnimating = false;
+
+        // تشخیص دستگاه لمسی یا موبایل
+        const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || window.innerWidth < 992;
+        if (isTouch) return; // موبایل - رفتار طبیعی مرورگر ✅
+
+        /** محاسبه اکسپوننشال EaseInOut برای اسکرول نرم **/
+        const easeInOut = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+        /** انیمیشن فریم‌محور بین دو موقعیت **/
+        function animateScroll(startY, endY, duration = 950) {
+            const startTime = performance.now();
+            isAnimating = true;
+            function anim(currentTime) {
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const eased = easeInOut(progress);
+                const y = startY + (endY - startY) * eased;
+                window.scrollTo(0, y);
+                if (progress < 1) requestAnimationFrame(anim);
+                else {
+                    isAnimating = false;
+                    if (window.AOS && typeof AOS.refresh === 'function') AOS.refresh(); // ری‌اینیت AOS بعد از توقف
+                }
+            }
+            requestAnimationFrame(anim);
+        }
+
+        /** پیدا کردن سکشن فعلی **/
+        function currentSectionIndex() {
+            const midpoint = window.scrollY + window.innerHeight / 2;
+            return sections.findIndex(s => midpoint >= s.offsetTop && midpoint < s.offsetTop + s.offsetHeight);
+        }
+
+        /** حرکت به سکشن بعد یا قبل **/
+        function go(direction) {
+            if (isAnimating) return;
+            const i = currentSectionIndex();
+            const next = sections[i + direction];
+            if (!next) return;
+            const target = next.offsetTop - headerOffset;
+            animateScroll(window.scrollY, target);
+        }
+
+        // 🔹 کنترل صفحه‌کلید
+        window.addEventListener('keydown', e => {
+            if (e.key === 'PageDown') { e.preventDefault(); go(1); }
+            else if (e.key === 'PageUp') { e.preventDefault(); go(-1); }
+        });
+
+        // 🔹 اسکرول ماوس (فقط دسکتاپ)
+        let wheelTimer;
+        window.addEventListener('wheel', e => {
+            if (isAnimating) return;
+            clearTimeout(wheelTimer);
+            wheelTimer = setTimeout(() => {
+                if (Math.abs(e.deltaY) > 100) go(e.deltaY > 0 ? 1 : -1);
+            }, 85);
+        }, { passive: false });
+    })();
 
 })();
 

@@ -496,6 +496,17 @@ h6 {
     .header-actions {
         display: none;
     }
+    .navmenu .btn-reserve {
+        width: auto !important; /* 👈 فقط اندازه متن */
+        display: inline-flex !important;
+        margin: 10px 13px; /* 👈 کمی فاصله از حاشیه‌های منو */
+        justify-content: center;
+        align-items: center;
+        padding: 8px 18px !important; /* 👈 هم‌تراز با نسخه دسکتاپ */
+        border-radius: 25px;
+    }
+
+ 
 }
 .navmenu a,
 .language-menu a,
@@ -662,13 +673,13 @@ h6 {
 .page-title {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 160px 0 80px 0;
+  padding: 140px 0 80px 0;
   text-align: center;
   position: relative;
 }
 
 .page-title h1 {
-  font-size: 42px;
+  font-size: 30px;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -692,6 +703,7 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
+  padding-left: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
@@ -1541,6 +1553,73 @@ section,
         color: #888888; /* 👈 توسی محو و آرام */
     }
 
+.faq .faq-contact-card {
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
+    border-radius: 3px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    color: var(--contrast-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 15px;
+}
+
+    .faq .faq-contact-card .card-icon {
+        margin-bottom: 20px;
+    }
+
+        .faq .faq-contact-card .card-icon i {
+            font-size: 48px;
+            color: color-mix(in srgb, var(--contrast-color), transparent 10%);
+        }
+
+    .faq .faq-contact-card .card-content h3 {
+        color: var(--contrast-color);
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .faq .faq-contact-card .card-content p {
+        color: color-mix(in srgb, var(--contrast-color), transparent 10%);
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .faq .faq-contact-card .contact-options {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: auto;
+    }
+
+        .faq .faq-contact-card .contact-options .contact-option {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: var(--contrast-color);
+            transition: all 0.3s ease;
+        }
+
+            .faq .faq-contact-card .contact-options .contact-option:hover {
+                background-color: rgba(255, 255, 255, 0.25);
+                transform: translateX(5px);
+            }
+
+            .faq .faq-contact-card .contact-options .contact-option i {
+                font-size: 20px;
+                margin-right: 12px;
+            }
+
+            .faq .faq-contact-card .contact-options .contact-option span {
+                font-weight: 500;
+                font-size: 16px;
+            }
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -1923,3 +2002,23 @@ section,
     margin: 0;
 }
 
+#hero,
+.gallery,
+.faq,
+.contact {
+    position: relative;
+    overflow: hidden;
+}
+
+    #hero::after,
+    .gallery::after,
+    .faq::after,
+    .contact::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #fff; /* یا رنگ پس‌زمینه‌ای که خط سفید رو محو کنه */
+    }
