@@ -2022,3 +2022,9 @@ section,
         height: 2px;
         background-color: #fff; /* یا رنگ پس‌زمینه‌ای که خط سفید رو محو کنه */
     }
+.map-container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-radius: 12px;
+}
