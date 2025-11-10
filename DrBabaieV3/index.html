@@ -175,36 +175,36 @@
                             </div>
 
                         </section>
-</div>
-                        <!-- تب ۲ -->
-                        <div id="gallery" class="tab-content">
-                            <div class="tab-grid">
-                                <div class="grid-item"><img src="img/gallery1.jpg" alt="فضای مطب"></div>
-                                <div class="grid-item"><img src="img/gallery2.jpg" alt="اتاق ویزیت"></div>
-                                <div class="grid-item"><img src="img/gallery3.jpg" alt="بخش تزریقات"></div>
-                            </div>
-                        </div>
-
-                        <!-- تب ۳ -->
-                        <div id="contact" class="tab-content">
-                            <div class="tab-grid">
-                                <div class="grid-item">
-                                    <h4>آدرس</h4>
-                                    <p>تهران، خیابان شریعتی، پلاک ۲۸۶</p>
-                                </div>
-                                <div class="grid-item">
-                                    <h4>تلفن</h4>
-                                    <p>۰۲۱ ـ ۴۴۵۵۶۶۹۹</p>
-                                </div>
-                                <div class="grid-item">
-                                    <h4>شبکه‌های اجتماعی</h4>
-                                    <p>Instagram / Telegram / WhatsApp</p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+                    <!-- تب ۲ -->
+                    <div id="gallery" class="tab-content">
+                        <div class="tab-grid">
+                            <div class="grid-item"><img src="img/gallery1.jpg" alt="فضای مطب"></div>
+                            <div class="grid-item"><img src="img/gallery2.jpg" alt="اتاق ویزیت"></div>
+                            <div class="grid-item"><img src="img/gallery3.jpg" alt="بخش تزریقات"></div>
+                        </div>
+                    </div>
+
+                    <!-- تب ۳ -->
+                    <div id="contact" class="tab-content">
+                        <div class="tab-grid">
+                            <div class="grid-item">
+                                <h4>آدرس</h4>
+                                <p>تهران، خیابان شریعتی، پلاک ۲۸۶</p>
+                            </div>
+                            <div class="grid-item">
+                                <h4>تلفن</h4>
+                                <p>۰۲۱ ـ ۴۴۵۵۶۶۹۹</p>
+                            </div>
+                            <div class="grid-item">
+                                <h4>شبکه‌های اجتماعی</h4>
+                                <p>Instagram / Telegram / WhatsApp</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
 
             <style>
                 .babaei-tabs {
@@ -217,7 +217,7 @@
 
                 .tab-header {
                     display: flex;
-                  /*  justify-content: flex-end;*/
+                    /*  justify-content: flex-end;*/
                     flex-wrap: wrap;
                     gap: 8px;
                     margin-bottom: 25px;
@@ -291,6 +291,235 @@
                 }
             </script>
         </section>
+
+
+
+
+
+
+        <style>
+            body {
+                background-color: #f9f9f9;
+                overflow-x: hidden;
+            }
+
+            /* ساختار کلی کارت‌ها */
+            .card-flip {
+                perspective: 1000px;
+                height: 140px; /* ارتفاع فشرده‌تر برای نمایش کامل */
+                margin-bottom: 18px;
+                text-align: center;
+            }
+
+            .card-inner {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform 0.8s ease-in-out;
+            }
+
+            .card-face {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                border-radius: 10px;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* وسط‌چین عمودی */
+                align-items: center; /* وسط‌چین افقی */
+                text-align: center; /* متن در مرکز */
+                height: 100%; /* تطابق کامل با ارتفاع کارت */
+            }
+
+            /* جلو کارت */
+            .card-front {
+                background-color: #fff;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            }
+
+                .card-front h5 {
+                    color: #5478BF;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+
+                .card-front p {
+                    color: #555;
+                    font-size: .85rem;
+                    line-height: 1.5;
+                }
+
+            /* پشت کارت */
+            .card-back {
+                background-color: #fff;
+                color: #fff;
+                transform: rotateY(180deg);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            }
+
+                .card-back h5 {
+                    color: #5478BF;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+
+                .card-back p {
+                    color: #555;
+                    font-size: .85rem;
+                    line-height: 1.5;
+                }
+
+            .flipped .card-inner {
+                transform: rotateY(180deg);
+            }
+        </style>
+
+        <div class="container py-4">
+            <!--<div class="text-center mb-4">
+                <h2 class="fw-bold text-primary" style="color:#0046c0;">کلینیک زیبایی دکتر بابایی</h2>
+                <p class="text-secondary">نمایش خودکار دغدغه‌ها، دلایل انتخاب و درمان‌های جدید</p>
+            </div>-->
+
+            <div class="row">
+
+                <!-- ستون ۱: دغدغه‌های زیباجو -->
+                <div class="col-md-4 col-1">
+                    <h4 class="text-center">دغدغه های شما</h4>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>جوش و آکنه</h5><p>درمان علمی جوش‌ها برای پوستی سالم‌تر و شفاف‌تر.</p></div>
+                            <div class="card-face card-back"><h5>درمان مؤثر و تخصصی</h5><p>ترکیب دارو و لیزر برای بازسازی پوست.</p></div>
+                        </div>
+                    </div>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>قرمزی پوست</h5><p>رفع التهاب و حساسیت ناشی از محرک‌های محیطی.</p></div>
+                            <div class="card-face card-back"><h5>آرامش با لیزر ملایم</h5><p>کاهش قرمزی با امواج کم‌حرارت.</p></div>
+                        </div>
+                    </div>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>چروک اطراف چشم</h5><p>بهبود خطوط ظریف و حفظ حالت طبیعی چهره.</p></div>
+                            <div class="card-face card-back"><h5>بوتاکس دقیق</h5><p>تزریق ایمن با بالاترین کیفیت مواد تزریقی.</p></div>
+                        </div>
+                    </div>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>لک‌های پوستی</h5><p>کاهش تیرگی ناشی از آفتاب و هورمون.</p></div>
+                            <div class="card-face card-back"><h5>لیزر لکه‌بر</h5><p>پاکسازی تدریجی با فناوری کوتاه‌پالس.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ستون ۲: چرا ما -->
+                <div class="col-md-4 col-2">
+                    <h4 class="text-center">چرا ما</h4>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>پزشکان متخصص</h5><p>تجربه و دقت علمی در هر اقدام درمانی.</p></div>
+                            <div class="card-face card-back"><h5>درمان‌های اختصاصی</h5><p>زیر نظر پزشکان دارای بورد تخصصی.</p></div>
+                        </div>
+                    </div>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>تجهیزات روز</h5><p>استفاده از دستگاه‌های مدرن زیبایی.</p></div>
+                            <div class="card-face card-back"><h5>نتایج پایدار</h5><p>به‌روزرسانی مداوم با استاندارد جهانی.</p></div>
+                        </div>
+                    </div>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>فضای آرام</h5><p>آرامش خاطر در محیط تمیز و دل‌پذیر.</p></div>
+                            <div class="card-face card-back"><h5>احساس راحتی</h5><p>طراحی بر اساس اصول ارگونومی و ذهنی.</p></div>
+                        </div>
+                    </div>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>نتیجه تضمینی</h5><p>تعهد تیم به بهترین نتایج درمانی.</p></div>
+                            <div class="card-face card-back"><h5>رضایت زیباجویان</h5><p>میانگین رضایت بالای ۹۸٪.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ستون ۳: درمان‌های جدید -->
+                <div class="col-md-4 col-3">
+                    <h4 class="text-center">درمان های رایج</h4>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>هایفو اولترا</h5><p>لیفت طبیعی پوست بدون جراحی.</p></div>
+                            <div class="card-face card-back"><h5>افزایش کلاژن</h5><p>جوانسازی عمیق در یک جلسه.</p></div>
+                        </div>
+                    </div>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>مزوتراپی مو</h5><p>تغذیه فولیکول‌ها برای رشد مو.</p></div>
+                            <div class="card-face card-back"><h5>تزریق هدفمند</h5><p>فرمول‌های به‌روز اروپایی.</p></div>
+                        </div>
+                    </div>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>کربوکسی‌تراپی</h5><p>افزایش اکسیژن پوست برای درخشش.</p></div>
+                            <div class="card-face card-back"><h5>بازسازی طبیعی</h5><p>تحریک سلولی و کاهش تیرگی.</p></div>
+                        </div>
+                    </div>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-face card-front"><h5>لیزر جوانسازی</h5><p>کاهش چین و لک با تحریک کلاژن.</p></div>
+                            <div class="card-face card-back"><h5>شفافیت پوست</h5><p>یک‌دست شدن رنگ و بافت پوست.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <script>
+            // تابع چرخش هر ستون
+            function flipColumn(colClass) {
+                document.querySelectorAll("." + colClass + " .card-flip").forEach(card => {
+                    card.classList.toggle("flipped");
+                });
+            }
+
+            // تابع پیوسته (recursive) برای چرخش پشت سر هم
+            function flipSequentially(columns, interval) {
+                let index = 0;
+                function cycle() {
+                    const current = columns[index];
+                    flipColumn(current);
+                    index = (index + 1) % columns.length;
+                    setTimeout(cycle, interval);
+                }
+                cycle();
+            }
+
+            // ⚡ فعالسازی فقط وقتی دیده شد
+            const container = document.querySelector(".container");
+            let flipStarted = false;
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !flipStarted) {
+                        flipStarted = true;
+                        // بعد از ۵ ثانیه از دیده شدن، شروع کن
+                        setTimeout(() => {
+                            flipSequentially(["col-1", "col-2", "col-3"], 5000);
+                        }, 5000);
+                        observer.disconnect(); // دیگه نیازی به مانیتور نیست
+                    }
+                });
+            }, {
+                threshold: 0.3 // وقتی حدود ۳۰٪ کانتینر دیده بشه، فعال می‌شه
+            });
+
+            observer.observe(container);
+        </script>
+
+
 
 
         <section id="about-stats" class="section">
@@ -949,9 +1178,9 @@
             <p>مرکز تخصصی پوست، مو و زیبایی با رویکرد علمی و خدماتی لوکس در محیطی آرام و حرفه‌ای.</p>
 
 
-            <p> آدرس : شیراز، بلوار ارم، سروناز، خاکشناسی ، مطب زیبایی دکتر بابایی</p>
+            <!--<p> آدرس : شیراز، بلوار ارم، سروناز، خاکشناسی ، مطب زیبایی دکتر بابایی</p>
 
-            <p> شماره تماس : ۳۲۲۸۶۶۰۰‑۰۷۱**۳۲۲۸۵۵۰۰‑۰۷۱</p>
+            <p> شماره تماس : ۳۲۲۸۶۶۰۰‑۰۷۱**۳۲۲۸۵۵۰۰‑۰۷۱</p>-->
 
             <div class="social-links d-flex justify-content-center">
                 <a href="#"><i class="bi bi-instagram"></i></a>
