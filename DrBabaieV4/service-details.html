@@ -49,7 +49,7 @@
                     <li><a href="faq.html">سوالات متداول</a></li>
                     <li><a href="contact.html">ارتباط با ما</a></li>
                     <li class="mobile-actions">
-                        <a href="appointment.html" class="btn-reserve d-flex d-xl-none">رزرو نوبت</a>
+                        <a href="#contact" class="btn-reserve d-flex d-xl-none">رزرو نوبت</a>
                     </li>
 
                     <li class="dropdown lang-mobile d-xl-none">
@@ -65,7 +65,7 @@
             </nav>
 
             <div class="header-actions d-none d-xl-flex align-items-center">
-                <a href="appointment.html" class="btn-reserve">رزرو نوبت</a>
+                <a href="#appointment" class="btn-reserve">رزرو نوبت</a>
                 <div class="dropdown language-dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="flag-icon"> English
@@ -115,9 +115,9 @@
                             <a href="#">جوانسازی بدن</a>
                         </div>
 
+
                         <a href="#contact" class="btn-care">مراقبت های مورد نیاز قبل و بعد از درمان</a>
 
-                      
 
                         <section class="service-reserve-section section">
                             <div class="container">
@@ -152,54 +152,7 @@
                         </section>
 
 
-                        <!--<div class="row">
-        <section id="contact" class="contact section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>رزرو نوبت</h2>
-                <p>برای رزرو نوبت همین حالا اقدام کنید</p>
-            </div>
 
-
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-
-                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
-                    <div class="row gy-4">
-
-                        <div class="col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="نام و نام خانوادگی" required="">
-                        </div>
-
-                        <div class="col-md-6 ">
-                            <input type="email" class="form-control" name="email" placeholder="شماره همراه" required="">
-                        </div>
-
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" name="subject" placeholder="نوع خدمت" required="">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" name="subject" placeholder="تاریخ رزرو" required="">
-                        </div>
-                        <div class="col-md-12">
-                            <textarea class="form-control" name="message" rows="6" placeholder="توضیحات مختصر (اختیاری)" required=""></textarea>
-                        </div>
-
-                        <div class="col-md-12 text-center">
-                            <div class="loading">در حال ارسال...</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">پیام شما با موفقیت ارسال شد. با تشکر!</div>
-
-                            <button type="submit">ارسال پیام</button>
-                        </div>
-
-                    </div>
-                </form>
-
-            </div>
-
-        </section>
-    </div>-->
                     </div>
 
                     <!-- جزئیات خدمات -->
@@ -226,7 +179,7 @@
 
                 </div>
 
-                
+
             </div>
 
         </section>
@@ -253,30 +206,106 @@
             </div>
 
             <!--<div class="credits">
-            طراحی و توسعه توسط
-            <a href="https://mtwebs.ir/" target="_blank">تیم تحقیق </a>
-        </div>-->
+                طراحی و توسعه توسط
+                <a href="https://mtwebs.ir/" target="_blank">تیم تحقیق </a>
+            </div>-->
         </div>
     </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.innerWidth <= 768) {
+                const servicesList = document.querySelector('#service-details .services-list');
+                const btnCare = document.querySelector('#service-details .btn-care');
+                const reserveSection = document.querySelector('#service-details .service-reserve-section');
+                const col8 = document.querySelector('#service-details .col-lg-8');
+
+                // آوردن col-lg-8 درست بعد از لیست خدمات
+                servicesList.after(col8);
+
+                // آوردن دکمه بعد از جزئیات
+                col8.after(btnCare);
+
+                // آوردن فرم بعد از دکمه
+                btnCare.after(reserveSection);
+            }
+        });
+    </script>
+
+    <!-- Modal مراقبت‌ها -->
+    <div id="careModal" class="care-modal">
+        <div class="care-modal-content">
+            <span class="care-close">&times;</span>
+            <div class="care-modal-body">
+                <h3>مراقبت‌های قبل و بعد از درمان</h3>
+                <p>
+                    برای دستیابی به بهترین نتیجه در درمان‌های زیبایی لازم است قبل و بعد از
+                    مراجعه به نکاتی توجه نمایید. این نکات باعث کاهش التهاب، افزایش ماندگاری
+                    اثر درمان و پیشگیری از عوارض احتمالی می‌شوند.
+                </p>
+
+                <h4>مراقبت‌های قبل از درمان</h4>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> از مصرف الکل و داروهای ضد‌التهاب حداقل ۲۴ ساعت قبل خودداری کنید.</li>
+                    <li><i class="bi bi-check-circle"></i> پوست باید تمیز و بدون کرم یا آرایش باشد.</li>
+                    <li><i class="bi bi-check-circle"></i> درصورت مصرف دارو یا سابقه حساسیت حتما پزشک را مطلع کنید.</li>
+                </ul>
+
+                <h4>مراقبت‌های بعد از درمان</h4>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> ناحیه درمان تا ۲۴ ساعت شسته نشود.</li>
+                    <li><i class="bi bi-check-circle"></i> از ماساژ یا فشار به ناحیه خودداری کنید.</li>
+                    <li><i class="bi bi-check-circle"></i> از قرارگیری در معرض حرارت بالا مثل سونا و آفتاب تا ۴۸ ساعت خودداری نمایید.</li>
+                </ul>
+                <p>
+                    رعایت این موارد به بهبود سریع‌تر و نتیجه بهتر درمان کمک می‌کند.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- اسکریپت باز/بسته شدن -->
+    <script>
+        const careBtn = document.querySelector('.btn-care');
+        const careModal = document.getElementById('careModal');
+        const careClose = document.querySelector('.care-close');
+
+        careBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            careModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        careClose.addEventListener('click', () => {
+            careModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === careModal) {
+                careModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 
 </body>
 

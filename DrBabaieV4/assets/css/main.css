@@ -1963,6 +1963,159 @@ section,
 .service-reserve-form * {
     box-sizing: border-box;
 }
+/* 👇 هماهنگی کامل تراز سکشن رزرو با لیست خدمات و دکمه مراقبت‌ها */
+.service-reserve-section .container {
+    max-width: 1140px; /* مطابق container صفحه خدمات */
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* خنثی کردن رفتار padding ستون داخلی فقط برای فرم */
+.col-lg-4 .service-reserve-form {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+}
+/* ================================
+   🔧 تراز کامل فرم رزرو با services-list
+=================================== */
+
+.service-details .service-reserve-section {
+    background-color: transparent; /* مطابق بخش بالا */
+    padding-top: 0; /* حذف فاصله اضافی بالا */
+}
+
+.service-details .service-reserve-form {
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 3px;
+    background-color: var(--surface-color);
+    padding: 10px 30px; /* دقیقا مثل services-list */
+    margin-top: 20px; /* کمی فاصله از دکمه مراقبت‌ها */
+    box-shadow: none; /* بدون سایه برای هماهنگی با services-list */
+    max-width: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* حذف گاتر منفی قبلی که باعث اختلاف عرض بود */
+.col-lg-4 .service-reserve-form {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+/* برای اطمینان از هم‌عرضی در viewportهای بزرگ */
+@media (min-width: 992px) {
+    .service-details .service-reserve-section .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+/* 🔧 فاصله ظاهری بهتر بین دکمه مراقبت و فرم رزرو */
+.btn-care {
+    margin-top: 25px; /* فاصله از services-list بالا */
+    margin-bottom: 35px; /* فاصله از فرم رزرو پایین */
+}
+
+/* برای نسخه‌های موبایل می‌تونی فاصله‌ها رو کمتر کنی */
+@media (max-width: 768px) {
+    .btn-care {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+}
+
+/* ==============================
+   Modal مراقبت‌ها
+============================== */
+.care-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+    .care-modal.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.care-modal-content {
+    background-color: var(--surface-color);
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    position: relative;
+    padding: 40px 50px;
+    overflow-y: auto;
+    max-height: 80vh;
+    color: var(--default-color);
+}
+
+.care-close {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 28px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+    .care-close:hover {
+        color: var(--accent-color);
+    }
+
+/* بدنه مودال */
+.care-modal-body h3,
+.care-modal-body h4 {
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.care-modal-body h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.care-modal-body h4 {
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.care-modal-body p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.care-modal-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+    .care-modal-body ul li {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .care-modal-body ul i {
+        color: var(--accent-color);
+        margin-left: 8px;
+        font-size: 18px;
+    }
 
 
 /*--------------------------------------------------------------
