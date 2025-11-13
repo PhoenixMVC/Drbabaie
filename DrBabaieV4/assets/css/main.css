@@ -2034,13 +2034,13 @@ section,
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
     visibility: hidden;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
     .care-modal.active {
@@ -2048,34 +2048,60 @@ section,
         opacity: 1;
     }
 
+/* محتوای مودال */
 .care-modal-content {
-    background-color: var(--surface-color);
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
     width: 90%;
     max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    position: relative;
-    padding: 40px 50px;
-    overflow-y: auto;
-    max-height: 80vh;
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: color-mix(in srgb, var(--surface-color), transparent 5%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     color: var(--default-color);
+    direction: inherit; /* 👈 ارث از زبان فعال سایت (FA/LTR) */
+    text-align: start; /* 👈 هوشمند چپ/راست بر اساس direction */
 }
 
+/* لایه کمکی برای دکمه بستن */
+.care-sticky-layer {
+    position: sticky;
+    top: 0;
+    direction: ltr; /* 👈 جهت محاسبه درست مختصات چپ */
+    z-index: 10;
+    height: 0; /* 👈 فقط کنترلی، نیازی به فضای خالی نیست */
+}
+
+/* دکمه × بستن مودال */
 .care-close {
     position: absolute;
-    top: 15px;
-    left: 20px;
-    font-size: 28px;
+    top: 3px;
+    font-size: 30px;
     color: color-mix(in srgb, var(--default-color), transparent 40%);
+    padding: 0 3px;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: all 0.25s ease;
 }
 
-    .care-close:hover {
-        color: var(--accent-color);
-    }
+/* 🌐 جهت برعکسی برای دو زبان */
+[dir="rtl"] .care-close {
+    left: 2px; /* 👈 در حالت راست‌چین، دکمه در سمت چپ */
+    right: auto;
+}
 
-/* بدنه مودال */
+[dir="ltr"] .care-close {
+    right: 2px; /* 👈 در حالت چپ‌چین، دکمه در سمت راست */
+    left: auto;
+}
+
+.care-close:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+
+/* بدنه متن و لیست‌ها */
 .care-modal-body h3,
 .care-modal-body h4 {
     color: var(--heading-color);
@@ -2088,8 +2114,8 @@ section,
 }
 
 .care-modal-body h4 {
-    margin-top: 25px;
     font-size: 20px;
+    margin-top: 25px;
 }
 
 .care-modal-body p {
@@ -2113,10 +2139,9 @@ section,
 
     .care-modal-body ul i {
         color: var(--accent-color);
-        margin-left: 8px;
         font-size: 18px;
+        margin-inline-end: 8px; /* 👈 هماهنگ با RTL/LTR */
     }
-
 
 /*--------------------------------------------------------------
 # Starter Section Section
