@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mehdi Babaei Jahromi Aesthetic Clinic in Shiraz</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Font IranSans -->
+    <link href="assets/fonts/iransans/font.css" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/vazir.css">
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/vazir-fanum.css">
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/logo-lotus-gold.png" alt="کلینیک دکتر بابایی">
+                <h1>Dr. Mehdi Babaei Jahromi Clinic</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+
+                    <!-- 👇 المان‌های مخصوص نمایش موبایل -->
+                    <li class="mobile-actions">
+                        <a href="#contact" class="btn-reserve d-flex d-xl-none">Appointment</a>
+                    </li>
+
+                    <li class="dropdown lang-mobile d-xl-none">
+                        <a href="#"><span>langs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#"><img src="https://flagcdn.com/24x18/ir.png" alt="فارسی"> فارسی</a></li>
+                            <li><a href="#"><img src="https://flagcdn.com/24x18/sa.png" alt="العربية"> العربية</a></li>
+                            <li><a href="#"><img src="https://flagcdn.com/24x18/gb.png" alt="English"> English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <div class="header-actions d-none d-xl-flex align-items-center">
+                <a href="#appointment" class="btn-reserve">Appointment</a>
+                <div class="dropdown language-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="flag-icon"> English
+                    </a>
+                    <ul class="dropdown-menu fade-lang" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/24x18/ir.png" alt="فارسی" class="flag-icon"> فارسی</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/24x18/sa.png" alt="العربية" class="flag-icon"> العربية</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/24x18/gb.png" alt="English" class="flag-icon"> English</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="hero" class="hero section dark-background">
+            <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+            <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Welcome to Dr. Babaei Clinic</h2>
+                        <p>Beauty, Serenity, and a Good Feeling</p>
+                        <a href="#about" class="btn-get-started">Service List</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <style>
+
+            .column-wrapper {
+                border-radius: 12px;
+                padding: 28px 22px;
+                margin: 6px;
+            }
+
+                .column-wrapper h4 {
+                    color: #D6B24C;
+                    font-weight: 700;
+                    margin-bottom: 25px;
+                }
+
+            .card-flip {
+                perspective: 1000px;
+                height: 140px;
+                margin-bottom: 18px;
+            }
+
+            .card-inner {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform .8s ease;
+            }
+
+            .card-face {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                border-radius: 10px;
+                overflow: hidden; /* مهم‌ترین بخش — لایه‌های درونی رو محدود می‌کنه */
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background: #fff;
+                box-shadow: 0 3px 10px rgba(0,0,0,.05);
+                isolation: isolate;
+                /*background: linear-gradient(to bottom, #fff 0%, #f8f9fa 100%);*/
+            }
+
+            .card-front h5,
+            .card-back h5 {
+                color: #5478BF;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            .card-front p,
+            .card-back p {
+                color: #555;
+                font-size: .85rem;
+                line-height: 1.5;
+            }
+
+            .card-back {
+                transform: rotateY(180deg);
+            }
+
+            .flipped .card-inner {
+                transform: rotateY(180deg);
+            }
+
+            /* ریسپانسیو */
+            @media (max-width: 991px) {
+                .column-wrapper {
+                    margin: 10px 0;
+                    padding: 24px 20px;
+                }
+
+                .card-flip {
+                    height: 160px;
+                }
+
+                .card-front p,
+                .card-back p {
+                    font-size: .8rem;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .card-flip {
+                    height: 180px;
+                }
+            }
+
+            .column-wrapper {
+                position: relative;
+                background: transparent;
+                border-radius: 12px;
+                /* box-shadow: 0 0 0 rgba(0,0,0,0.08);*/
+                padding: 70px 24px 28px;
+                margin: 10px;
+                /*  box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.06);*/
+                background: linear-gradient(to bottom, #fff 0%, #f8f9fa 100%);
+            }
+
+                .column-wrapper h4 {
+                    position: absolute;
+                    top: 12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: #D6B24C;
+                    background: #fff;
+                    padding: 0 18px;
+                    z-index: 2;
+                }
+            /* انیمیشن فلیپ نرم‌تر و لوکس‌تر */
+            .card-inner {
+                transition: transform 1.2s cubic-bezier(0.55,0.06,0.35,1);
+            }
+
+            .flipped .card-inner {
+                transform: rotateY(180deg);
+            }
+
+            /* -------------------- افکت نوری مه‌طلایی -------------------- */
+            /*.lux-grid {
+                position: absolute;
+                inset: 0;
+                display: grid;
+                grid-template-columns: repeat(16, 1fr);
+                grid-template-rows: repeat(10, 1fr);
+                z-index: 2;
+                pointer-events: none;
+                border-radius: inherit;*/ /* 🔹 گوشه‌ها را از کارت می‌گیرد */
+            /*overflow: hidden;
+            }*/
+            .lux-grid {
+                position: absolute;
+                inset: 0;
+                display: grid;
+                grid-template-columns: repeat(16, 1fr);
+                grid-template-rows: repeat(10, 1fr);
+                pointer-events: none;
+                background: linear-gradient(90deg, rgba(180,220,255,0.05) 0%, rgba(255,255,255,0.12) 50%, rgba(180,220,255,0.05) 100%);
+                mix-blend-mode: screen;
+                border-radius: inherit; /* 🔹 از کارت می‌گیره */
+                overflow: hidden;
+                pointer-events: none; /* اطمینان از اینکه روی رویداد کلیک اثر نذاره */
+                z-index: 1; /* زیر لایه‌ی متن و بالا از پس‌زمینه */
+                pointer-events: none;
+            }
+
+                .lux-grid span {
+                    background: linear-gradient(135deg, rgba(160,200,255,0.35) 0%, rgba(100,160,225,0.22) 100%);
+                    mix-blend-mode: screen;
+                    filter: blur(0.6px);
+                    opacity: 0;
+                }
+
+                .lux-grid.animate span {
+                    animation: luxWave 3.2s cubic-bezier(0.55,0.06,0.35,1) forwards;
+                }
+
+            @keyframes luxWave {
+                0% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 0.6;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            /* برای محل متن کارت */
+            .card-face {
+                position: relative;
+                z-index: 3; /* جلوتر از نور */
+            }
+
+            .card-flip {
+                position: relative;
+                border-radius: 14px; /* گردی گوشه‌های خود کارت */
+                overflow: hidden; /* برش لایه‌های داخلی بیرون از محدوده */
+                isolation: isolate; /* کلید حیاتی برای mix-blend-mode */
+                z-index: 0;
+            }
+
+                /* لایه فید آبی */
+                .card-flip .lux-grid {
+                    position: absolute;
+                    inset: 0;
+                    z-index: 1;
+                    pointer-events: none;
+                    border-radius: inherit; /* گوشه‌ها دقیقاً برابر کارت */
+                    overflow: hidden;
+                    /* ✨ این خط جادوئی باعث میشه radius حتی با transform هم رعایت بشه */
+                    -webkit-mask-image: radial-gradient(circle, #000 99%, transparent 100%);
+                    mask-image: radial-gradient(circle, #000 99%, transparent 100%);
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                }
+        </style>
+
+        <section id="test" class="py-5 ">
+            <div class="container-fluid px-lg-5 px-md-4 px-3">
+                <div class="row gx-5 gy-4">
+
+                    <!-- Column 1 -->
+                    <div class="col-12 col-lg-4 col-1">
+                        <div class="column-wrapper h-100">
+                            <h4 class="text-center mb-4">Your Concerns</h4>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Acne and Pimples</h5><p>Scientific acne treatments for clearer and healthier skin.</p></div>
+                                    <div class="card-face card-back"><h5>Combined Therapy</h5><p>A mix of medication, laser, and mesotherapy for maximum effectiveness.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Skin Redness</h5><p>Reducing inflammation and sensitivity caused by environmental factors.</p></div>
+                                    <div class="card-face card-back"><h5>Gentle Laser</h5><p>Controlled waves to reduce redness safely.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Eye Wrinkles</h5><p>Improve fine lines without altering natural facial expressions.</p></div>
+                                    <div class="card-face card-back"><h5>Precise Botox</h5><p>Highly accurate injections for natural results.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Skin Spots</h5><p>Reducing sun or hormonal pigmentation.</p></div>
+                                    <div class="card-face card-back"><h5>Spot Removal Laser</h5><p>Gradual lightening with high safety.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-12 col-lg-4 col-2">
+                        <div class="column-wrapper h-100">
+                            <h4 class="text-center mb-4">Why Choose Us</h4>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Specialist Doctors</h5><p>Treatments under the supervision of experienced aesthetic specialists.</p></div>
+                                    <div class="card-face card-back"><h5>Extensive Experience</h5><p>Years of expertise focused on skin and hair aesthetics.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Modern Equipment</h5><p>Up‑to‑date with the latest global technologies.</p></div>
+                                    <div class="card-face card-back"><h5>Accuracy and Quality</h5><p>Real, lasting, and natural results.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Calm Environment</h5><p>Pleasant and fully sterile atmosphere.</p></div>
+                                    <div class="card-face card-back"><h5>Feeling of Trust</h5><p>Professional behavior and personalized care.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Complete Transparency</h5><p>Clear explanation of every treatment detail.</p></div>
+                                    <div class="card-face card-back"><h5>Patient Satisfaction</h5><p>More than 98% satisfaction rate among visitors.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="col-12 col-lg-4 col-3">
+                        <div class="column-wrapper h-100">
+                            <h4 class="text-center mb-4">Popular Treatments</h4>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>HIFU Ultra</h5><p>Non‑surgical skin lifting using ultrasound waves.</p></div>
+                                    <div class="card-face card-back"><h5>Collagen Stimulation</h5><p>Rebuild youthful skin naturally.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Hair Mesotherapy</h5><p>Nourishing follicles to promote new hair growth.</p></div>
+                                    <div class="card-face card-back"><h5>European Formulas</h5><p>Safe and certified materials.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Carboxytherapy</h5><p>Boosting oxygen flow in skin tissue.</p></div>
+                                    <div class="card-face card-back"><h5>Brighter & Even Skin</h5><p>Improving texture and reducing dark areas.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-flip">
+                                <div class="card-inner">
+                                    <div class="card-face card-front"><h5>Laser Rejuvenation</h5><p>Reducing spots and wrinkles with controlled energy.</p></div>
+                                    <div class="card-face card-back"><h5>Radiant Skin</h5><p>Enhance glow and evenness of complexion.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <script>
+            const columns = document.querySelectorAll('.column-wrapper');
+
+            // ساخت گرید نوری روی هر کارت
+            columns.forEach(col => {
+                const cards = col.querySelectorAll('.card-flip');
+                cards.forEach(card => {
+                    const lux = document.createElement('div');
+                    lux.className = 'lux-grid';
+                    const cols = 16, rows = 10;
+                    for (let y = 0; y < rows; y++) {
+                        for (let x = 0; x < cols; x++) {
+                            const span = document.createElement('span');
+                            const delay = ((cols - x) + y) * 0.018;
+                            span.style.animationDelay = `${delay}s`;
+                            const angle = 120 + Math.random() * 60; // زاویه بین 120 تا 180 درجه
+                            const light = Math.random() * 0.3 + 0.3; // شدت مرکزی
+                            const deep = Math.random() * 0.25 + 0.15; // تیرگی لبه
+
+                            lux.appendChild(span);
+                        }
+                    }
+                    card.appendChild(lux);
+                });
+            });
+
+            // حالت فعلی هر کارت برای جایگزینی متن
+            const states = [];
+            columns.forEach(col => {
+                states.push(Array.from(col.querySelectorAll('.card-flip')).map(() => 0));
+            });
+
+            let currentCol = 0;
+
+            function waveLuxColumn() {
+                const cards = columns[currentCol].querySelectorAll('.card-flip');
+
+                cards.forEach((card, i) => {
+                    setTimeout(() => {
+                        const lux = card.querySelector('.lux-grid');
+                        const front = card.querySelector('.card-front');
+                        const back = card.querySelector('.card-back');
+                        const state = states[currentCol][i];
+
+                        lux.classList.add('animate');
+
+                        front.style.transition = "opacity 0.6s cubic-bezier(0.55,0.06,0.35,1)";
+                        front.style.opacity = "0";
+
+                        setTimeout(() => {
+                            // 🔁 چرخه بین front و back
+                            if (state === 0) {
+                                front.innerHTML = back.innerHTML;
+                                states[currentCol][i] = 1;
+                            } else {
+                                front.innerHTML = card.dataset.originalFront || card.querySelector('.card-front').innerHTML;
+                                states[currentCol][i] = 0;
+                            }
+                            front.style.opacity = "1";
+                            lux.classList.remove('animate');
+                        }, 3200);
+                    }, i * 300);
+                });
+
+                currentCol = (currentCol + 1) % columns.length;
+            }
+
+            // ذخیره متن اولیه هر کارت به‌عنوان اصل برای بازگشت
+            document.querySelectorAll('.card-flip').forEach(card => {
+                card.dataset.originalFront = card.querySelector('.card-front').innerHTML;
+            });
+
+            setInterval(waveLuxColumn, 7200);
+        </script>
+
+
+
+
+
+
+        <section id="about-stats" class="section">
+            <!-- About Section -->
+            <div id="about" class="about">
+
+                <!-- Section Title -->
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>About the Clinic</h2>
+                    <p>At Dr. Mehdi Babaei Jahromi Clinic, beauty, science, and peace of mind come together in harmony.</p>
+                </div><!-- End Section Title -->
+
+                <div class="container">
+                    <div class="row gy-5 align-items-center">
+
+                        <!-- Intro Text -->
+                        <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+                            <h3>Blending Medical Science with the Art of Beauty</h3>
+                            <p>
+                                Dr. Mehdi Babaei Jahromi Clinic, supported by a specialist doctor, skilled technicians, and the latest global technologies, provides skin and hair rejuvenation and beauty services in a calm, safe, and luxurious environment.
+                            </p>
+                            <a href="#contact" class="about-btn align-self-center align-self-xl-start">
+                                <span>Book a Consultation</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+                        </div>
+
+                        <!-- Feature Cards -->
+                        <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
+                            <div class="row gy-4">
+
+                                <div class="col-md-6 icon-box position-relative">
+                                    <i class="bi bi-heart"></i>
+                                    <h4><a href="#" class="stretched-link">Scientific and Specialized Approach</a></h4>
+                                    <p>All treatments are scientifically based, supervised by a specialist, and performed to international standards.</p>
+                                </div>
+
+                                <div class="col-md-6 icon-box position-relative">
+                                    <i class="bi bi-stars"></i>
+                                    <h4><a href="#" class="stretched-link">Sense of Beauty in a Luxurious Space</a></h4>
+                                    <p>A calm, modern environment inspired by elegant details for a unique aesthetic care experience.</p>
+                                </div>
+
+                                <div class="col-md-6 icon-box position-relative">
+                                    <i class="bi bi-person-badge"></i>
+                                    <h4><a href="#" class="stretched-link">Professional Doctor and Team</a></h4>
+                                    <p>Comprising a highly experienced doctor and staff specializing in rejuvenation and skin treatments.</p>
+                                </div>
+
+                                <div class="col-md-6 icon-box position-relative">
+                                    <i class="bi bi-flower1"></i>
+                                    <h4><a href="#" class="stretched-link">Experience Genuine Relaxation</a></h4>
+                                    <p>Every visitor is greeted with respect, comfort, and a warm sense of care and beauty.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- End About Section -->
+            <!-- Stats Section -->
+            <div id="stats" class="stats section">
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row gy-4">
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stats-item d-flex align-items-center w-100 h-100">
+                                <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+                                <div>
+                                    <span data-purecounter-start="0" data-purecounter-end="35000" data-purecounter-duration="1" class="purecounter"></span>
+                                    <p>Satisfied Clients</p>
+                                </div>
+                            </div>
+                        </div><!-- End Stats Item -->
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stats-item d-flex align-items-center w-100 h-100">
+                                <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+                                <div>
+                                    <span data-purecounter-start="0" data-purecounter-end="22" data-purecounter-duration="1" class="purecounter"></span>
+                                    <p>Trained Staff Members</p>
+                                </div>
+                            </div>
+                        </div><!-- End Stats Item -->
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stats-item d-flex align-items-center w-100 h-100">
+                                <i class="bi bi-headset color-green flex-shrink-0"></i>
+                                <div>
+                                    <span data-purecounter-start="0" data-purecounter-end="13" data-purecounter-duration="1" class="purecounter"></span>
+                                    <p>Years of Experience</p>
+                                </div>
+                            </div>
+                        </div><!-- End Stats Item -->
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stats-item d-flex align-items-center w-100 h-100">
+                                <i class="bi bi-people color-pink flex-shrink-0"></i>
+                                <div>
+                                    <span data-purecounter-start="0" data-purecounter-end="29" data-purecounter-duration="1" class="purecounter"></span>
+                                    <p>Beauty & Skin Services</p>
+                                </div>
+                            </div>
+                        </div><!-- End Stats Item -->
+
+                    </div>
+                </div>
+            </div><!-- /Stats Section -->
+        </section>
+
+
+        <!-- Services Section -->
+        <section id="services" class="services section light-background">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Our Services</h2>
+                <p>At Dr. Babaei Clinic, we offer a full range of beauty, therapeutic, and skin rejuvenation services using the latest global technologies and a skilled professional team, so you can enjoy a more beautiful appearance and greater self-confidence.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon flex-shrink-0"><i class="bi bi-person-heart"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Rejuvenation & Lift</a></h4>
+                            <p class="description">Restoring firmness, smoothness, and freshness with advanced facelift techniques using threads, Botox and filler injections, microneedling, and innovative collagen‑stimulating methods. These services maintain your natural expressions while enhancing youthfulness.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon flex-shrink-0"><i class="bi bi-droplet-half"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Botox</a></h4>
+                            <p class="description">Eliminating frown lines, forehead lines, and crow’s feet with Botox from trusted European and American brands. Achieve a smoother, fresher look—performed precisely and safely by a specialist while keeping your natural facial movements.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon flex-shrink-0"><i class="bi bi-stars"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Filler</a></h4>
+                            <p class="description">Filler injections for natural lip, cheek, under‑eye volume, or jawline and chin shaping. Performed with precise techniques to preserve facial harmony and balance for an authentic, elegant look.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon flex-shrink-0"><i class="bi bi-droplet"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Meso Gel</a></h4>
+                            <p class="description">A powerful blend of hyaluronic acid and vitamins for deep hydration, improved texture, reduced pigmentation, and restored natural glow. Ideal for dull, tired, or dry skin with gradual, lasting rejuvenation results.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon flex-shrink-0"><i class="bi bi-emoji-smile"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Hair Mesotherapy</a></h4>
+                            <p class="description">Injecting nutrient complexes, peptides, and vitamins into the scalp to strengthen follicles, reduce hair loss, and stimulate regrowth. A non‑invasive, fully specialized method to restore natural hair health and volume.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon flex-shrink-0"><i class="bi bi-heart-pulse"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Body Slimming</a></h4>
+                            <p class="description">Combining advanced cryolipolysis, cavitation, and radiofrequency techniques to contour the body, eliminate cellulite, and firm the skin. Safe and non‑surgical, for a toned, smoother physique.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon flex-shrink-0"><i class="bi bi-heart-pulse"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Laser Hair Removal</a></h4>
+                            <p class="description">Permanent hair removal with next‑generation laser devices suitable for all skin tones, featuring smart cooling systems for painless and safe treatment. Enjoy soft, smooth skin without daily shaving.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon flex-shrink-0"><i class="bi bi-heart-pulse"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Double Chin Fat Reduction</a></h4>
+                            <p class="description">Targeted, specialized injections to remove sub‑chin fat and redefine the jawline precisely. A non‑surgical method for subtle, natural contouring and added facial definition.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon flex-shrink-0"><i class="bi bi-heart-pulse"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Body Rejuvenation</a></h4>
+                            <p class="description">Using collagen‑stimulating techniques, radio waves, and restorative treatments to tighten and improve skin quality in areas such as arms, abdomen, and thighs. Ideal for those seeking firmer, smoother skin after weight loss or pregnancy.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- /Services Section -->
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials section dark-background">
+
+            <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                          "loop": true,
+                          "speed": 600,
+                          "autoplay": {
+                            "delay": 5000
+                          },
+                          "slidesPerView": "auto",
+                          "pagination": {
+                            "el": ".swiper-pagination",
+                            "type": "bullets",
+                            "clickable": true
+                          }
+                        }
+                    </script>
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <!--<img src="assets/img/testimonials/patient-1.jpg" class="testimonial-img" alt="">-->
+                                <h3>Elham Razavi</h3>
+                                <h4>Facial Rejuvenation Client</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <span>The result of filler and Botox injections at Dr. Babaei Clinic was amazingly natural. There was no sign of swelling or artificial appearance — exactly what I wanted.</span>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <!--<img src="assets/img/testimonials/patient-2.jpg" class="testimonial-img" alt="">-->
+                                <h3>Nasim Naderi</h3>
+                                <h4>Skin Brightening & Spot Treatment</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <span>After a few sessions of laser and mesotherapy, my skin became clearer, brighter, and spot-free. The clinic team was highly attentive and kind, and the environment was extremely clean and relaxing.</span>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <!--  <img src="assets/img/testimonials/patient-3.jpg" class="testimonial-img" alt="">-->
+                                <h3>Dr. Elhami</h3>
+                                <h4>PRP Injection & Skin Care Client</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <span>The PRP treatment for my skin was truly effective. The doctor and staff performed the procedure with great patience and precision, and I felt completely safe and confident throughout.</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <!-- <img src="assets/img/testimonials/patient-4.jpg" class="testimonial-img" alt="">-->
+                                <h3>Mahsa Abbasi</h3>
+                                <h4>Thread Lift & Non‑Surgical Rejuvenation</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <!--<i class="bi bi-quote quote-icon-left"></i>-->
+                                    <span>The thread lift at this clinic was done with minimal pain. The result looked completely natural—no heaviness or inflammation. I’m truly grateful to Dr. Babaei.</span>
+                                    <!--<i class="bi bi-quote quote-icon-right"></i>-->
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <!--   <img src="assets/img/testimonials/patient-5.jpg" class="testimonial-img" alt="">-->
+                                <h3>Shadi Moradi</h3>
+                                <h4>Skin Cleansing & Hydrafacial</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <!--<i class="bi bi-quote quote-icon-left"></i>-->
+                                    <span>After the cleansing and hydrafacial, my skin became radiant like a mirror! The clinic’s atmosphere was relaxing and sterile, and every detail was handled with great care.</span>
+                                    <!--<i class="bi bi-quote quote-icon-right"></i>-->
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /Testimonials Section -->
+
+        <section id="gallery" class="gallery section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Gallery</h2>
+                <p>A glimpse of specialized environments, modern equipment, and Meditrust medical services designed to provide patients with the best possible experience.</p>
+
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+                    <ul class="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-nature">Environment</li>
+                        <li data-filter=".filter-architecture">Rooms</li>
+                        <li data-filter=".filter-people">Equipment</li>
+
+                    </ul>
+
+                    <div class="row gallery-grid isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+                        <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-nature">
+                            <div class="gallery-card">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/gallery-1.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="gallery-overlay">
+                                    <!--<h4>زیبایی طبیعت</h4>
+                                    <p>تصویری آرامش‌بخش از چشم‌اندازهای طبیعی بکر.</p>-->
+                                    <div class="gallery-actions">
+                                        <a href="assets/img/gallery/gallery-1.png" title="مشاهده تصویر" class="glightbox"><i class="bi bi-eye"></i></a>
+                                        <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Gallery Item -->
+
+                        <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-architecture">
+                            <div class="gallery-card">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/gallery-2.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="gallery-overlay">
+                                    <!--<h4>چشم‌انداز شهری</h4>
+                                    <p>ترکیب خطوط مدرن با بافت شهری زنده.</p>-->
+                                    <div class="gallery-actions">
+                                        <a href="assets/img/gallery/gallery-2.png" title="مشاهده تصویر" class="glightbox"><i class="bi bi-eye"></i></a>
+                                        <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Gallery Item -->
+
+                        <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-people">
+                            <div class="gallery-card">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/gallery-3.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="gallery-overlay">
+                                    <!--<h4>لحظات ناب</h4>
+                                    <p>ثبت لحظاتی خاص و بی‌تکرار از زندگی روزمره.</p>-->
+                                    <div class="gallery-actions">
+                                        <a href="assets/img/gallery/gallery-3.png" title="مشاهده تصویر" class="glightbox"><i class="bi bi-eye"></i></a>
+                                        <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Gallery Item -->
+
+                        <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-nature">
+                            <div class="gallery-card">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/gallery-4.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="gallery-overlay">
+                                    <!--<h4>شکوه طبیعت وحشی</h4>
+                                    <p>نمایی خیره‌کننده از مناطق بکر و دست‌نخورده.</p>-->
+                                    <div class="gallery-actions">
+                                        <a href="assets/img/gallery/gallery-4.png" title="مشاهده تصویر" class="glightbox"><i class="bi bi-eye"></i></a>
+                                        <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Gallery Item -->
+
+                        <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-architecture">
+                            <div class="gallery-card">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/gallery-5.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="gallery-overlay">
+                                    <!--<h4>طراحی مدرن</h4>
+                                    <p>اثر هنری در معماری با سبک نوین و خلاقیت بالا.</p>-->
+                                    <div class="gallery-actions">
+                                        <a href="assets/img/gallery/gallery-5.png" title="مشاهده تصویر" class="glightbox"><i class="bi bi-eye"></i></a>
+                                        <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Gallery Item -->
+
+                        <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-people">
+                            <div class="gallery-card">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/gallery-6.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="gallery-overlay">
+                                    <!--<h4>پرتره‌های خاص</h4>
+                                    <p>ترکیبی از نور، زاویه و حس در چهره‌ها.</p>-->
+                                    <div class="gallery-actions">
+                                        <a href="assets/img/gallery/gallery-6.png" title="مشاهده تصویر" class="glightbox"><i class="bi bi-eye"></i></a>
+                                        <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Gallery Item -->
+
+                        <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-nature">
+                            <div class="gallery-card">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/gallery-7.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="gallery-overlay">
+                                    <!--<h4>آب‌های آرام</h4>
+                                    <p>منظره‌ای چشم‌نواز از دریاچه‌ها و رودخانه‌ها.</p>-->
+                                    <div class="gallery-actions">
+                                        <a href="assets/img/gallery/gallery-7.png" title="مشاهده تصویر" class="glightbox"><i class="bi bi-eye"></i></a>
+                                        <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Gallery Item -->
+
+                        <div class="col-xl-3 col-md-4 col-sm-6 gallery-item isotope-item filter-architecture">
+                            <div class="gallery-card">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/gallery-8.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="gallery-overlay">
+                                    <!--<h4>جاهای تاریخی</h4>
+                                    <p>ثبت اصالت و معماری بناهای ارزشمند تاریخ.</p>-->
+                                    <div class="gallery-actions">
+                                        <a href="assets/img/gallery/gallery-8.png" title="مشاهده تصویر" class="glightbox"><i class="bi bi-eye"></i></a>
+                                        <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Gallery Item -->
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="faq" class="faq section light-background">
+
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions from clients before experiencing the professional services at Dr. Babaei Clinic</p>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                        <div class="faq-container">
+
+                            <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                                <h3>What is the process for consultation and starting services at the clinic?</h3>
+                                <div class="faq-content">
+                                    <p>In the first step, a consultation session is held with Dr. Babaei and the specialist team to assess your needs, skin or hair condition, and aesthetic goals. Afterwards, a personalized treatment plan along with an accurate cost and time estimate will be provided.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-left"></i>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <h3>Is the initial consultation before services free?</h3>
+                                <div class="faq-content">
+                                    <p>Yes, the initial consultation for most clinic services is free so that clients can confidently decide on the right treatment. For certain specialized or medical procedures, only the physician's visit fee may apply.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-left"></i>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                                <h3>How soon are the results of aesthetic treatments visible?</h3>
+                                <div class="faq-content">
+                                    <p>The time it takes to see results depends on the type of service. Some, such as filler and Botox injections, show immediate effects, while skin treatments like laser or mesotherapy reveal gradual results over several sessions.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-left"></i>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <h3>Is the initial consultation before services free?</h3>
+                                <div class="faq-content">
+                                    <p>Yes, the initial consultation for most clinic services is free so that clients can confidently decide on the right treatment. For certain specialized or medical procedures, only the physician's visit fee may apply.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-left"></i>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                                <h3>Are the clinic’s services guaranteed and followed up after treatment?</h3>
+                                <div class="faq-content">
+                                    <p>All procedures are performed under the direct supervision of Dr. Mehdi Babaei Jahromi and the team of specialist physicians, with post-treatment follow-ups. If necessary, complimentary repair or review sessions are offered to clients.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-left"></i>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                                <h3>How can I book an appointment?</h3>
+                                <div class="faq-content">
+                                    <p>You can book your consultation or desired service through the online booking button on the website, by calling the clinic, or messaging us via WhatsApp. We respond throughout the week and offer full online support.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-left"></i>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <h3>Is the initial consultation before services free?</h3>
+                                <div class="faq-content">
+                                    <p>Yes, the initial consultation for most clinic services is free so that clients can confidently decide on the right treatment. For certain specialized or medical procedures, only the physician's visit fee may apply.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-left"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- /بخش پرسش‌های متداول -->
+        <!-- بخش تماس با ما -->
+        <section id="contact" class="contact section">
+
+            <!-- عنوان بخش -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contact Us</h2>
+                <p>Use one of the following methods to get in touch with us.</p>
+
+            </div><!-- پایان عنوان بخش -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row gy-5">
+
+                        <div class="col-lg-4">
+                            <div class="info-item d-flex align-items-center">
+                                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                                <div>
+                                    <h3>Address</h3>
+                                    <p>Shiraz, Eram Boulevard, Servonaz, Khakshenasi, Dr. Babaei Aesthetic Office</p>
+                                </div>
+                            </div>
+                        </div><!-- End info item -->
+
+                        <div class="col-lg-4">
+                            <div class="info-item d-flex align-items-center">
+                                <i class="bi bi-telephone flex-shrink-0"></i>
+                                <div>
+                                    <h3>Contact Us</h3>
+                                    <p>071‑32285500</p>
+                                    <p>071‑32286600</p>
+                                </div>
+                            </div>
+                        </div><!-- End info item -->
+
+                        <div class="col-lg-4">
+                            <div class="info-item d-flex align-items-center">
+                                <i class="bi bi-envelope flex-shrink-0"></i>
+                                <div>
+                                    <h3>Mobile / WhatsApp</h3>
+                                    <p>09174058123</p>
+                                </div>
+                            </div>
+                        </div><!-- End info item -->
+
+                    </div>
+
+                </div>
+
+                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+                    <div class="row gy-4">
+
+                        <div class="col-md-6">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                        </div>
+
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                        </div>
+
+                        <div class="col-md-12">
+                            <textarea class="form-control" name="message" rows="6" placeholder="Your Message" required=""></textarea>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <div class="loading">Sending...</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent successfully. Thank you!</div>
+
+                            <button type="submit">Send Message</button>
+                        </div>
+
+                    </div>
+                </form>
+                <!-- پایان فرم تماس -->
+
+            </div>
+
+        </section><!-- /بخش تماس با ما -->
+
+
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+        <div class="container">
+            <h3 class="sitename">Dr. Mehdi Babaei Jahromi Clinic</h3>
+            <p>A specialized center for skin, hair, and aesthetics with a scientific approach, offering luxurious services in a calm and professional environment.</p>
+
+            <!--<p> Address: Shiraz, Eram Boulevard, Servonaz, Khakshenasi, Dr. Babaei Aesthetic Office</p>
+            <p> Contact Number: 071‑32286600 ** 071‑32285500</p>-->
+
+            <div class="social-links d-flex justify-content-center">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-telegram"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <a href="#"><i class="bi bi-telephone"></i></a>
+            </div>
+
+            <div class="copyright">
+                <span>© All rights reserved by</span>
+                <strong class="px-1 sitename">Dr. Mehdi Babaei Jahromi Clinic</strong>
+                <span>.</span>
+            </div>
+
+            <!--<div class="credits">
+                Designed and developed by
+                <a href="https://mtwebs.ir/" target="_blank">Research Team</a>
+            </div>-->
+        </div>
+    </footer>
+
+
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
