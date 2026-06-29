@@ -1,9 +1,33 @@
-﻿
-/* Fonts */
+﻿/* Fonts */
+@font-face {
+    font-family: vazir;
+    src: url('../font/Vazir-FD-WOL.woff') format('woff');
+}
+@font-face {
+    font-family: vaziren;
+    src: url('../font/Vazir-Bold.woff') format('woff');
+}
+/** {
+    font-family: iransan;
+}
+*/
 :root {
-  --default-font: "Vazir",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Vazir",  sans-serif;
-  --nav-font: "Vazir",  sans-serif;
+    --default-font: "vazir", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "vazir", sans-serif;
+    --nav-font: "vazir", sans-serif;
+}
+/* وقتی زبان انگلیسی فعلی است */
+html.en {
+    --default-font: "vaziren", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --heading-font: "vaziren", sans-serif;
+    --nav-font: "vaziren", sans-serif;
+}
+
+/* اگر عربی است (باز هم Vazir یا فونت عربی دلخواه) */
+html.ar {
+    --default-font: "vazir", sans-serif;
+    --heading-font: "vazir", sans-serif;
+    --nav-font: "vazir", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -79,53 +103,53 @@ h6 {
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+    display: none;
+    background: #df1529;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
 }
 
 .php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+    display: none;
+    color: #ffffff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
 }
 
 .php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
+    display: none;
+    background: var(--surface-color);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
 }
 
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
+    .php-email-form .loading:before {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin: 0 10px -6px 0;
+        border: 3px solid var(--accent-color);
+        border-top-color: var(--surface-color);
+        animation: php-email-form-loading 1s linear infinite;
+    }
 
 @keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
 
-  100% {
-    transform: rotate(360deg);
-  }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /*--------------------------------------------------------------
@@ -149,19 +173,25 @@ h6 {
     .header .logo img {
         position: relative;
         top: -3px; /* 👈 با این مقدار لوگو بالاتر یا پایین‌تر میره */
-        max-height: 26px;
-        margin-right: 8px;
-        width: 45px;
+        /*max-height: 26px;*/
+      
+        /*width: 45px;*/
         height: auto;
+       
+      
+        height: 40px; /* به‌جای 26 امتحان کن */
+        width: auto;
+        max-height: none;
+        margin-right: 8px;
         margin-left: 6px;
     }
 
-.header .logo h1 {
-  font-size: 20px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
-}
+    .header .logo .site-title {
+        font-size: 20px;
+        margin: 0;
+        font-weight: 700;
+        color: var(--heading-color);
+    }
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
@@ -519,13 +549,13 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background: url(../img/footer-bg.jpg) center no-repeat;
-  background-size: cover;
-  font-size: 14px;
-  text-align: center;
-  padding: 30px 0;
-  position: relative;
+    color: var(--default-color);
+    background: url(/assets/img/footer-bg.webp) center no-repeat;
+    background-size: cover;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
 }
 
 .footer:after {
@@ -540,13 +570,13 @@ h6 {
   z-index: 1;
 }
 
-.footer h3 {
-  font-size: 36px;
-  font-weight: 700;
-  position: relative;
-  padding: 0;
-  margin: 0 0 15px 0;
-}
+    .footer .sitename {
+        font-size: 36px;
+        font-weight: 700;
+        position: relative;
+        padding: 0;
+        margin: 0 0 15px 0;
+    }
 
 .footer p {
   font-size: 15;
@@ -589,6 +619,35 @@ h6 {
   font-size: 13px;
   padding-top: 5px;
 }
+    .footer .social-links a {
+        width: 36px;
+        height: 36px;
+        margin: 0 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--accent-color); /* طلایی */
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .footer .social-links svg {
+        width: 18px;
+        height: 18px;
+        fill: #fff; /* آیکون سفید */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Hover لوکس، نرم */
+    .footer .social-links a:hover {
+        background-color: #fff;
+    }
+
+        .footer .social-links a:hover svg {
+            fill: var(--accent-color);
+            transform: scale(1.1);
+        }
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -632,7 +691,7 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
+  left: 15px;
   bottom: 15px;
   z-index: 99999;
   background-color: var(--accent-color);
@@ -750,35 +809,38 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/* ساختار اصلی بخش هیرو */
 .hero {
     width: 100%;
-    height: 100vh; /* تمام ارتفاع صفحه */
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 0; /* حذف فاصله پیش‌فرض */
+    padding: 0;
 }
 
-
-    .hero img {
+    /* تصویر پس‌زمینه - دقت کنید کلاس hero-bg اضافه شد */
+    .hero .hero-bg {
         position: absolute;
         inset: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover; /* تصویر متناسب ولی پر کننده */
+        object-fit: cover;
         z-index: 1;
     }
 
+    /* لایه تاریک‌کننده روی عکس برای خوانایی متن */
     .hero::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.3); /* یا از تم سایت color-mix استفاده کن */
+        background: rgba(0, 0, 0, 0.3);
         z-index: 2;
     }
 
+    /* کانتینر متن‌ها */
     .hero .container {
         position: relative;
         z-index: 3;
@@ -786,48 +848,119 @@ section,
         color: #fff;
     }
 
+    .hero .hero-logo {
+        position: absolute;
+        left: 4%;
+        bottom: 8%;
+        width: 150px;
+        height: auto;
+        z-index: 5;
+        /* تنظیمات ماسک برای امضای بسیار نرم */
+        -webkit-mask-image: linear-gradient(to right, black 50%, transparent 50%);
+        mask-image: linear-gradient(to right, black 50%, transparent 50%);
+        -webkit-mask-size: 400% 100%; /* افزایش سایز ماسک برای نرمی بیشتر لبه‌ها */
+        mask-size: 400% 100%;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+        /* زمان ۱۲ ثانیه برای وقار و سنگینی حرکت */
+        animation: luxurySignature 12s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+        filter: drop-shadow(0 0 10px rgba(255,255,255,0.15));
+    }
 
-.hero h2 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  text-transform: uppercase;
+@keyframes luxurySignature {
+    0% {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+        opacity: 0;
+        transform: scale(0.98) translateY(5px);
+        filter: blur(8px);
+    }
+    /* ظهور بسیار آهسته ذرات در ۳ ثانیه اول */
+    15% {
+        opacity: 1;
+        filter: blur(3px);
+    }
+    /* مرحله امضا شدن اصلی که تا ثانیه ۶ طول می‌کشد */
+    50%, 80% {
+        -webkit-mask-position: 0% 0;
+        mask-position: 0% 0;
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0px);
+    }
+    /* محو شدن پودری در انتهای سیکل */
+    95% {
+        opacity: 0;
+        filter: blur(12px);
+        transform: scale(1.02);
+        -webkit-mask-position: 0% 0;
+        mask-position: 0% 0;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
 }
 
-.hero p {
-  margin: 10px 0 0 0;
-  font-size: 24px;
-  color: var(--heading-color);
+
+/* استایل متون و دکمه */
+.hero h1 {
+    margin: 90px 0 0 0;
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.hero h2 {
+    margin: 10px 0 0 0;
+    font-size: 20px;
 }
 
 .hero .btn-get-started {
-  color: var(--default-color);
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 40px;
-  margin: 30px 0 0 0;
-  border-radius: 4px;
-  transition: 0.5s;
-  border: 2px solid var(--accent-color);
+    color: #fff;
+    padding: 8px 40px;
+    margin-top: 30px;
+    border-radius: 4px;
+    display: inline-block;
+    border: 2px solid #fff;
+    transition: 0.5s;
+    text-decoration: none;
 }
 
-.hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
+/* تنظیمات مخصوص موبایل */
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
+    /* تنظیم لوگو در موبایل: ثابت در سمت چپ */
+    .hero .hero-logo {
+        width: 90px; /* کمی کوچکتر برای موبایل */
+        left: 5%; /* فاصله از سمت چپ */
+        bottom: 5%; /* فاصله از پایین گوشی */
+        transform: none; /* حذف وسط‌چین بودن */
+        z-index: 5; /* بالاتر از لایه‌های دیگر */
+    }
 
-  .hero p {
-    font-size: 18px;
-  }
+    .hero .container {
+        /* متن‌ها در سمت راست (فضای آبی) قرار بگیرند */
+        text-align: right !important;
+        padding-right: 15px;
+        padding-left: 30%; /* ایجاد فاصله که متن روی دکتر نرود */
+    }
+
+    .hero h1 {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .hero .btn-get-started {
+        padding: 6px 25px;
+        font-size: 14px;
+    }
 }
+
 
 
 /*--------------------------------------------------------------
@@ -923,6 +1056,40 @@ section,
   font-size: 16px;
 }
 
+.stats .stats-item {
+    background-color: var(--surface-color);
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+    .stats .stats-item svg {
+        /* 1. رنگ‌دهی (SVG با currentColor کار می‌کند) */
+        color: var(--accent-color);
+        /* 2. تعیین سایز: جایگزین font-size شد */
+        width: 50px;
+        height: 50px;
+        /* 3. هم‌راستایی و حاشیه‌بندی */
+        margin-right: 20px;
+        /* برای اطمینان از هم‌راستایی عمودی آیکن با متن/عدد */
+        vertical-align: middle;
+        /* برای بهتر شدن نمایش در کنار متن */
+        display: inline-block;
+    }
+
+    .stats .stats-item span {
+        color: var(--heading-color);
+        font-size: 36px;
+        display: block;
+        font-weight: 600;
+    }
+
+    .stats .stats-item p {
+        padding: 0;
+        margin: 0;
+        font-family: var(--heading-font);
+        font-size: 16px;
+    }
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -976,6 +1143,17 @@ section,
   font-size: 14px;
 }
 
+    .services .service-item .icon svg {
+        width: 28px;
+        height: 28px;
+        color: var(--contrast-color); 
+        transition: 0.5s;
+    }
+
+    .services .service-item:hover .icon svg {
+        color: var(--accent-color);
+    }
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1023,17 +1201,19 @@ section,
   margin: 0 auto;
 }
 
-.testimonials .testimonial-item h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-}
+    .testimonials .testimonial-item .full-name {
+        font-size: 20px;
+        font-weight: bold;
+        /*margin: 10px 0 5px 0;*/
+        margin-bottom: 12px;
+    }
 
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  margin: 0 0 15px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
+    .testimonials .testimonial-item .description {
+        font-size: 14px;
+        /*margin: 0 0 15px 0;*/
+        margin-bottom: 12px;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+    }
 
 .testimonials .testimonial-item .stars {
   margin-bottom: 15px;
@@ -1620,6 +1800,10 @@ section,
                 font-size: 16px;
             }
 
+html[dir="rtl"] .faq-toggle {
+    transform: rotate(180deg);
+}
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -1645,7 +1829,7 @@ section,
   margin-right: 15px;
 }
 
-.contact .info-item h3 {
+.contact .info-item .title-text {
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 2px 0;
@@ -1711,6 +1895,60 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+.contact .info-item svg.icon {
+    width: 57px;
+    height: 57px;
+    min-width: 57px;
+    color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
+    margin-right: 15px;
+    padding: 15px;
+    overflow: visible;
+    display: block;
+}
+.contact .info-item:hover svg.icon {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+}
+[dir="rtl"] .contact .info-item svg.icon {
+    margin-right: 0;
+    margin-left: 12px;
+}
+#contactSuccess,
+#contactError {
+    border-radius: 0 !important;
+}
+/* لینک کل آیتم */
+.contact .contact-item {
+    text-decoration: none;
+    color: inherit; /* 👈 خیلی مهم */
+}
+
+    /* متن‌ها همیشه مشکی (یا default) */
+    .contact .contact-item p {
+        color: var(--default-color);
+    }
+
+    /* عنوان کمی بولد */
+    .contact .contact-item .title-text {
+        font-weight: 700;
+    }
+
+    /* فقط آیکن در hover طلایی شود */
+    .contact .contact-item:hover svg.icon {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+    }
+
+    /* اگر خواستی hover ظریف */
+    .contact .contact-item:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+    }
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
@@ -1810,12 +2048,12 @@ section,
     border-radius: 3px;
 }
 
-.service-details h3 {
+.service-details h1 {
   font-size: 26px;
   font-weight: 700;
 }
 
-.service-details h4 {
+.service-details h2 {
   font-size: 20px;
   font-weight: 700;
 }
@@ -1902,25 +2140,37 @@ section,
     .service-reserve-form textarea {
         width: 100%;
         background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-        border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-        border-radius: 6px;
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+        border-radius: 1px;
         padding: 10px 15px;
         color: var(--default-color);
-        font-size: 15px;
+        font-size: 14px;
         outline: none;
-        transition: 0.3s ease;
+        transition: border-color 0.3s ease;
+        font-family: var(--default-font);
     }
 
         .service-reserve-form input:focus,
         .service-reserve-form select:focus,
         .service-reserve-form textarea:focus {
             border-color: var(--accent-color);
+            outline: none !important;
+            box-shadow: none !important;
+
         }
 
     .service-reserve-form textarea {
         resize: none;
         min-height: 100px;
     }
+
+        .service-reserve-form input::placeholder,
+        .service-reserve-form textarea::placeholder {
+            color: rgba(0,0,0,0.3);
+            font-family: var(--default-font);
+            font-weight: 400;
+        }
+
 
 .btn-service-reserve {
     width: 100%;
@@ -1934,10 +2184,9 @@ section,
 }
 
     .btn-service-reserve:hover {
-        background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+        background: color-mix(in srgb, var(--accent-color), transparent 20%);
     }
 
-/* موبایل */
 @media (max-width: 768px) {
     .service-reserve-form {
         padding: 25px;
@@ -1945,46 +2194,39 @@ section,
     }
 }
 
-/* 💡 رفع اختلاف عرض فرم با دکمه مراقبت‌ها */
+
 .service-reserve-section,
 .service-reserve-form {
     width: 100%;
 }
 
-/* حذف محدودیت ذاتی بوت‌استرپ به خاطر padding-column */
 .col-lg-4 .service-reserve-form {
     margin-left: -calc(var(--bs-gutter-x) * 0.5); /* جبران پدینگ چپ ستون */
     margin-right: -calc(var(--bs-gutter-x) * 0.5); /* جبران پدینگ راست ستون */
     width: calc(100% + var(--bs-gutter-x)); /* افزایش عرض فرم برای هم‌راستایی */
 }
 
-/* کنترل دوباره فریم و دکمه از نظر box-sizing */
 .service-reserve-form,
 .service-reserve-form * {
     box-sizing: border-box;
 }
-/* 👇 هماهنگی کامل تراز سکشن رزرو با لیست خدمات و دکمه مراقبت‌ها */
 .service-reserve-section .container {
-    max-width: 1140px; /* مطابق container صفحه خدمات */
+    max-width: 1140px; 
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     margin-left: auto;
     margin-right: auto;
 }
 
-/* خنثی کردن رفتار padding ستون داخلی فقط برای فرم */
 .col-lg-4 .service-reserve-form {
     margin-left: 0 !important;
     margin-right: 0 !important;
     width: 100% !important;
 }
-/* ================================
-   🔧 تراز کامل فرم رزرو با services-list
-=================================== */
 
 .service-details .service-reserve-section {
-    background-color: transparent; /* مطابق بخش بالا */
-    padding-top: 0; /* حذف فاصله اضافی بالا */
+    background-color: transparent; 
+    padding-top: 0; 
 }
 
 .service-details .service-reserve-form {
@@ -1999,27 +2241,23 @@ section,
     box-sizing: border-box;
 }
 
-/* حذف گاتر منفی قبلی که باعث اختلاف عرض بود */
 .col-lg-4 .service-reserve-form {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
 }
 
-/* برای اطمینان از هم‌عرضی در viewportهای بزرگ */
 @media (min-width: 992px) {
     .service-details .service-reserve-section .container {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 }
-/* 🔧 فاصله ظاهری بهتر بین دکمه مراقبت و فرم رزرو */
 .btn-care {
     margin-top: 25px; /* فاصله از services-list بالا */
     margin-bottom: 35px; /* فاصله از فرم رزرو پایین */
 }
 
-/* برای نسخه‌های موبایل می‌تونی فاصله‌ها رو کمتر کنی */
 @media (max-width: 768px) {
     .btn-care {
         margin-top: 20px;
@@ -2027,9 +2265,6 @@ section,
     }
 }
 
-/* ==============================
-   Modal مراقبت‌ها
-============================== */
 .care-modal {
     position: fixed;
     inset: 0;
@@ -2048,7 +2283,6 @@ section,
         opacity: 1;
     }
 
-/* محتوای مودال */
 .care-modal-content {
     position: relative;
     max-height: 80vh;
@@ -2056,15 +2290,15 @@ section,
     width: 90%;
     max-width: 800px;
     padding: 2rem;
-    border-radius: 12px;
-    background-color: color-mix(in srgb, var(--surface-color), transparent 5%);
+    /*border-radius: 12px;*/
+    background-color: var(--surface-color);
+    /*background-color: color-mix(in srgb, var(--surface-color), transparent 5%);*/
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     color: var(--default-color);
     direction: inherit; /* 👈 ارث از زبان فعال سایت (FA/LTR) */
     text-align: start; /* 👈 هوشمند چپ/راست بر اساس direction */
 }
 
-/* لایه کمکی برای دکمه بستن */
 .care-sticky-layer {
     position: sticky;
     top: 0;
@@ -2073,7 +2307,6 @@ section,
     height: 0; /* 👈 فقط کنترلی، نیازی به فضای خالی نیست */
 }
 
-/* دکمه × بستن مودال */
 .care-close {
     position: absolute;
     top: 3px;
@@ -2084,7 +2317,6 @@ section,
     transition: all 0.25s ease;
 }
 
-/* 🌐 جهت برعکسی برای دو زبان */
 [dir="rtl"] .care-close {
     left: 2px; /* 👈 در حالت راست‌چین، دکمه در سمت چپ */
     right: auto;
@@ -2100,8 +2332,6 @@ section,
     transform: scale(1.1);
 }
 
-
-/* بدنه متن و لیست‌ها */
 .care-modal-body h3,
 .care-modal-body h4 {
     color: var(--heading-color);
@@ -2140,8 +2370,17 @@ section,
     .care-modal-body ul i {
         color: var(--accent-color);
         font-size: 18px;
-        margin-inline-end: 8px; /* 👈 هماهنگ با RTL/LTR */
+        margin-inline-end: 8px; 
     }
+/* Placeholder – استاندارد */
+.service-reserve-form ::placeholder {
+    color: rgba(0, 0, 0, 0.35);
+    font-weight: 200;
+    opacity: 1; /* مهم برای فایرفاکس */
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
@@ -2331,7 +2570,7 @@ section,
     margin-top: 40px;
     margin-bottom: 50px;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 1px;
 }
 /*--------------------------------------------------------------
 # About Section
@@ -2508,6 +2747,25 @@ section,
                 color: var(--contrast-color);
             }
 
+        .about .values-section .value-item .value-icon svg {
+            width: 32px;
+            height: 32px;
+            color: var(--accent-color); /* کنترل رنگ با currentColor */
+            stroke-width: 1.5;
+            transition: all 0.3s ease;
+        }
+        .about .values-section .value-item:hover .value-icon {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+            .about .values-section .value-item:hover .value-icon svg {
+                color: #fff;
+                color: var(--contrast-color);
+            }
+
+
+
 .about .certifications-section {
     margin-top: 80px;
     padding: 4rem 0;
@@ -2669,6 +2927,157 @@ section,
 }
 
 /*-- Services --*/
+/* ==============================
+           Clinic Services (Scoped)
+ ============================== */
+.clinic-services .section-title {
+    margin-bottom: 50px;
+    margin-top: -7px;
+}
+
+.clinic-services .service-item {
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 25px 0px rgba(221, 221, 221, 0.75);
+    text-align: center;
+    position: relative;
+    padding: 25px 10px;
+    border-radius: 5px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+    .clinic-services .service-item:hover {
+        background-color: #516B9C;
+        color: #ffffff;
+    }
+
+        .clinic-services .service-item:hover:before {
+            opacity: 1;
+        }
+
+        .clinic-services .service-item:hover .service-front {
+            display: none;
+            transform: scale(0.5);
+        }
+
+        .clinic-services .service-item:hover .service-end {
+            display: block;
+            transform: scale(1);
+        }
+
+            .clinic-services .service-item:hover .service-end p {
+                margin-bottom: 24px;
+            }
+
+    .clinic-services .service-item .service-front {
+        transition: 0.5s all ease;
+        display: block;
+    }
+
+        .clinic-services .service-item .service-front svg {
+            display: block;
+            color: #516B9C;
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .clinic-services .service-item .service-front h3 {
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+
+        .clinic-services .service-item .service-front p {
+            margin-bottom: 0;
+        }
+
+    .clinic-services .service-item .service-end {
+        position: relative;
+        display: none;
+        padding-top: 4px;
+        padding-bottom: 5px;
+    }
+
+        .clinic-services .service-item .service-end svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 170px;
+            color: #fff;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .clinic-services .service-item .service-end h3 {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .clinic-services .service-item .service-end p {
+            margin-bottom: 0;
+            color: #ffffff;
+        }
+
+        .clinic-services .service-item .service-end a {
+            display: inline-block;
+            background-color: #d6b24c;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+            .clinic-services .service-item .service-end a:hover {
+                background-color: #b8963a;
+                color: #fff;
+            }
+    /* ==============================
+           SVG Icon – Visual Size Fix
+           ============================== */
+
+    /* main service icon */
+    .clinic-services .service-item .service-front svg {
+        width: 68px;
+        height: 68px;
+        margin: 0 auto 40px;
+        color: #516B9C;
+    }
+
+    /* stroke icons look thin by default */
+    .clinic-services .service-item .service-front svg {
+        stroke-width: 1.6;
+    }
+
+    /* fill icons */
+    .clinic-services .service-item svg path,
+    .clinic-services .service-item svg circle,
+    .clinic-services .service-item svg rect {
+        fill: currentColor;
+        stroke: none;
+    }
+
+    /* hover */
+    .clinic-services .service-item:hover svg {
+        color: #ffffff;
+    }
+
+    /* background icon (very large like original) */
+    .clinic-services .service-item .service-end svg {
+        width: 190px;
+        height: 190px;
+        opacity: 0.12;
+    }
+
+/* small-viewBox icons (heart etc.) */
+.clinic-services svg[viewBox="0 0 16 16"] {
+    transform: scale(1.15);
+}
+
 /*.section-title {
     margin-bottom: 50px;
     margin-top: -7px;
@@ -2785,14 +3194,9 @@ section,
                 color: #ffffff;
                 background-color: #111111;
             }*/
-
 /*-- End Services --*/
+/*--------------- Start AppointmentPage -----------------------*/
 
-
-
-
-/*-- Start Reserve --*/
-/* 🔹 Hero Section مخصوص صفحه رزرو */
 .hero-reserve-section {
     position: relative;
     min-height: 450px; /* ارتفاع معمولی */
@@ -2851,7 +3255,7 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-/* 🔸 بخش زیر هیرو (سه ستون) */
+
 .hero-reserve-wrapper .hero-content {
   display: grid;
   grid-template-columns: 5fr 3fr 4fr; /* نسبت ۵:۳:۴ */
@@ -2888,11 +3292,23 @@ section,
         font-size: 14px;
         padding: 10px 15px;
         box-shadow: none;
-     /*   border-radius: 3px;*/
+        /* border-radius: 5px;*/
         transition: border-color 0.3s ease;
-
         margin-bottom: 1rem;
     }
+
+        .hero-reserve-wrapper .reserve-card input:focus,
+        .hero-reserve-wrapper .reserve-card select:focus,
+        .hero-reserve-wrapper .reserve-card textarea:focus,
+        .hero-reserve-wrapper .reserve-card input:focus-visible,
+        .hero-reserve-wrapper .reserve-card select:focus-visible,
+        .hero-reserve-wrapper .reserve-card textarea:focus-visible {
+            outline: none;
+            border-color: #D4A348; /* طلایی دقیق */
+            box-shadow: none; /* ✅ مهم: حذف هاله */
+            color: var(--default-color);
+        }
+    
 
     .hero-reserve-wrapper .reserve-card button {
         background: var(--accent-color);
@@ -2909,7 +3325,6 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-/* متن معرفی */
 .hero-reserve-wrapper .hero-text {
   background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
   border-radius: var(--radius-md);
@@ -2918,7 +3333,7 @@ section,
   line-height: 1.8;
 }
 
-.hero-reserve-wrapper .hero-text h3 {
+.hero-reserve-wrapper .hero-text h1 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -2941,7 +3356,6 @@ section,
   color: var(--accent-color);
 }
 
-/* ویدیو */
 .hero-reserve-wrapper .hero-video .video-wrapper {
   position: relative;
   background-size: cover;
@@ -2951,62 +3365,291 @@ section,
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-.hero-reserve-wrapper .hero-video .play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--accent-color);
-  color: #fff;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-}
+    .hero-reserve-wrapper .hero-video .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--accent-color);
+        color: #fff;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        border: none;
+    }
 
 .hero-reserve-wrapper .hero-video .play-btn:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-/* واکنش‌گرا */
 @media (max-width: 991px) {
   .hero-reserve-wrapper .hero-content {
     grid-template-columns: 1fr;
   }
     .hero-reserve-wrapper .hero-form .reserve-card {
-        margin-top: -120px; /* هنوز شناوره، فقط کمتر تا در صفحه موبایل درست دیده شه */
+        margin-top: -120px; 
         position: relative;
         z-index: 9999;
     }
 }
-.service-icon-wrapper {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 2px solid #d4b47c; /* طلایی */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all .3s ease;
-    background-color: #ffffff; /* حالت عادی سفید */
+
+.hero-video .video-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-md);
+    overflow: hidden;
 }
 
-    .service-icon-wrapper svg {
-        width: 32px;
-        height: 32px;
-        stroke: #d4b47c; /* آیکون در حالت عادی طلایی */
-        fill: none;
-        transition: all .3s ease;
+.hero-video-player {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    background: #000;
+}
+
+.hero-video.playing .play-btn {
+    display: none;
+}
+
+.hero-video.playing .hero-video-player {
+    display: block;
+}
+.hero-description {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.9;
+    word-spacing: -1px;
+}
+
+/*--------------- End AppointmentPage -----------------------*/
+
+
+ /* 3 Block in Main Page*/
+
+
+.column-wrapper {
+    border-radius: 12px;
+    padding: 28px 22px;
+    margin: 6px;
+}
+
+.column-wrapper h4 {
+    color: #D6B24C;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.card-flip {
+    perspective: 1000px;
+    height: 140px;
+    margin-bottom: 18px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .8s ease;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden; /* مهم‌ترین بخش — لایه‌های درونی رو محدود می‌کنه */
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,.05);
+    isolation: isolate;
+    /*background: linear-gradient(to bottom, #fff 0%, #f8f9fa 100%);*/
+}
+
+.card-front h5,
+.card-back h5 {
+    color: #5478BF;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-front p,
+.card-back p {
+    color: #555;
+    font-size: .85rem;
+    line-height: 1.5;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ریسپانسیو */
+@media (max-width: 991px) {
+    .column-wrapper {
+        margin: 10px 0;
+        padding: 24px 20px;
     }
 
-    .service-icon-wrapper:hover {
-        background-color: #d4b47c; /* هاور: دایره طلایی */
+    .card-flip {
+        height: 160px;
     }
 
-        .service-icon-wrapper:hover svg {
-            stroke: #ffffff; /* هاور: آیکون سفید */
-        }
+    .card-front p,
+    .card-back p {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-flip {
+        height: 180px;
+    }
+}
+
+.column-wrapper {
+    position: relative;
+    background: transparent;
+    border-radius: 12px;
+    /* box-shadow: 0 0 0 rgba(0,0,0,0.08);*/
+    padding: 70px 24px 28px;
+    margin: 10px;
+    /*  box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.06);*/
+    background: linear-gradient(to bottom, #fff 0%, #f8f9fa 100%);
+}
+
+    .column-wrapper h4 {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #D6B24C;
+        background: #fff;
+        padding: 0 18px;
+        z-index: 2;
+    }
+/* انیمیشن فلیپ نرم‌تر و لوکس‌تر */
+.card-inner {
+    transition: transform 1.2s cubic-bezier(0.55,0.06,0.35,1);
+}
+
+.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* -------------------- افکت نوری مه‌طلایی -------------------- */
+/*.lux-grid {
+                    position: absolute;
+                    inset: 0;
+                    display: grid;
+                    grid-template-columns: repeat(16, 1fr);
+                    grid-template-rows: repeat(10, 1fr);
+                    z-index: 2;
+                    pointer-events: none;
+                    border-radius: inherit;*/ /* 🔹 گوشه‌ها را از کارت می‌گیرد */
+/*overflow: hidden;
+                }*/
+.lux-grid {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(180,220,255,0.05) 0%, rgba(255,255,255,0.12) 50%, rgba(180,220,255,0.05) 100%);
+    mix-blend-mode: screen;
+    border-radius: inherit; /* 🔹 از کارت می‌گیره */
+    overflow: hidden;
+    pointer-events: none; /* اطمینان از اینکه روی رویداد کلیک اثر نذاره */
+    z-index: 1; /* زیر لایه‌ی متن و بالا از پس‌زمینه */
+    pointer-events: none;
+}
+
+    .lux-grid span {
+        background: linear-gradient(135deg, rgba(160,200,255,0.35) 0%, rgba(100,160,225,0.22) 100%);
+        mix-blend-mode: screen;
+        filter: blur(0.6px);
+        opacity: 0;
+    }
+
+    .lux-grid.animate span {
+        animation: luxWave 3.2s cubic-bezier(0.55,0.06,0.35,1) forwards;
+    }
+
+@keyframes luxWave {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* برای محل متن کارت */
+.card-face {
+    position: relative;
+    z-index: 3; /* جلوتر از نور */
+}
+
+.card-flip {
+    position: relative;
+    border-radius: 14px; /* گردی گوشه‌های خود کارت */
+    overflow: hidden; /* برش لایه‌های داخلی بیرون از محدوده */
+    isolation: isolate; /* کلید حیاتی برای mix-blend-mode */
+    z-index: 0;
+}
+
+    /* لایه فید آبی */
+    .card-flip .lux-grid {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        border-radius: inherit; /* گوشه‌ها دقیقاً برابر کارت */
+        overflow: hidden;
+        /* ✨ این خط جادوئی باعث میشه radius حتی با transform هم رعایت بشه */
+        -webkit-mask-image: radial-gradient(circle, #000 99%, transparent 100%);
+        mask-image: radial-gradient(circle, #000 99%, transparent 100%);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+    }
+
+
+.flag-icon {
+    width: 24px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+
